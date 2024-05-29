@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.ColorInput?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="518.0" prefWidth="297.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.foodig_v2.sidebarController">
+   <children>
+      <Pane prefHeight="580.0" prefWidth="300.0" style="-fx-background-color: white;" />
+      <AnchorPane fx:id="side_pane" layoutY="53.0" prefHeight="527.0" prefWidth="209.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="5.0">
+         <children>
+            <VBox layoutX="40.0" prefHeight="527.0" prefWidth="170.0">
+               <children>
+                  <Button fx:id="Homebtn" mnemonicParsing="false" onAction="#TurntoHome" prefHeight="38.0" prefWidth="209.0" style="-fx-background-color: #3f3e87; -fx-background-radius: 8;" stylesheets="@Start_btn.css" text="Home" textAlignment="CENTER" textFill="#fdfbfb">
+                     <font>
+                        <Font name="Cambria" size="48.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="Foodbtn" mnemonicParsing="false" onAction="#TurntoFood" prefHeight="38.0" prefWidth="209.0" style="-fx-background-color: #3f3e87; -fx-background-radius: 8;" stylesheets="@Start_btn.css" text="Food" textAlignment="CENTER" textFill="#fdfbfb">
+                     <font>
+                        <Font name="Cambria Bold" size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="Mousebtn" mnemonicParsing="false" onAction="#TurntoMouse" prefHeight="38.0" prefWidth="209.0" style="-fx-background-color: #3f3e87; -fx-background-radius: 8;" stylesheets="@Start_btn.css" text="Mouse" textAlignment="CENTER" textFill="#fdfbfb">
+                     <font>
+                        <Font name="Cambria Bold" size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="Settingbtn" mnemonicParsing="false" onAction="#TurntoSetting" prefHeight="38.0" prefWidth="209.0" style="-fx-background-color: #3f3e87; -fx-background-radius: 8;" stylesheets="@Start_btn.css" text="Setting" textAlignment="CENTER" textFill="#fdfbfb">
+                     <font>
+                        <Font name="Cambria Bold" size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox prefHeight="527.0" prefWidth="0.0" style="-fx-background-color: white;">
+               <children>
+                  <ImageView fitHeight="41.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/pngtree-vector-house-icon-png-image_708543-removebg-preview.png" />
+                     </image>
+                     <effect>
+                        <ColorAdjust>
+                           <input>
+                              <Blend mode="SRC_ATOP">
+                                 <topInput>
+                                    <ColorInput height="61.2" paint="#3f3e87" width="52.45" />
+                                 </topInput>
+                              </Blend>
+                           </input>
+                        </ColorAdjust>
+                     </effect>
+                  </ImageView>
+                  <ImageView fitHeight="41.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/food-service.png" />
+                     </image>
+                     <effect>
+                        <ColorAdjust>
+                           <input>
+                              <Blend mode="SRC_ATOP">
+                                 <topInput>
+                                    <ColorInput height="61.2" paint="#3f3e87" width="52.45" />
+                                 </topInput>
+                              </Blend>
+                           </input>
+                        </ColorAdjust>
+                     </effect>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <ImageView fitHeight="41.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/mouse.png" />
+                     </image>
+                     <effect>
+                        <ColorAdjust>
+                           <input>
+                              <Blend mode="SRC_ATOP">
+                                 <topInput>
+                                    <ColorInput height="61.2" paint="#3f3e87" width="52.45" />
+                                 </topInput>
+                              </Blend>
+                           </input>
+                        </ColorAdjust>
+                     </effect>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <ImageView fitHeight="41.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/setting.png" />
+                     </image>
+                     <effect>
+                        <ColorAdjust>
+                           <input>
+                              <Blend mode="SRC_ATOP">
+                                 <topInput>
+                                    <ColorInput height="61.2" paint="#3f3e87" width="52.45" />
+                                 </topInput>
+                              </Blend>
+                           </input>
+                        </ColorAdjust>
+                     </effect>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </ImageView>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="47.0" prefWidth="300.0">
+         <children>
+            <Label alignment="TOP_CENTER" contentDisplay="BOTTOM" layoutY="3.0" prefHeight="38.0" prefWidth="240.0" text="Foodig" textAlignment="CENTER" textFill="#3f3e87eb" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="10.0">
+               <font>
+                  <Font name="Cambria Bold" size="25.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="sidebar" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="16.0">
+               <image>
+                  <Image url="@image/menu button.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

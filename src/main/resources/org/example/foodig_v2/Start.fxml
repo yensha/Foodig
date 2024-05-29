@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="518.0" prefWidth="297.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.foodig_v2.SceneController">
+   <children>
+      <Pane prefHeight="580.0" prefWidth="300.0" style="-fx-background-color: #dee8ff;">
+         <children>
+             <Button alignment="CENTER" layoutX="99.0" layoutY="306.0" maxHeight="-Infinity" maxWidth="-Infinity" onAction="#switchToMenu" prefHeight="46.0" prefWidth="100.0" style="-fx-background-radius: 20;" stylesheets="@Start_btn.css" text="Start " textFill="#dee8ff">
+               <font>
+                  <Font name="Cambria" size="20.0" />
+               </font>
+            </Button>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="102.0" layoutY="124.0" text="Foodig" textAlignment="CENTER" textFill="#3f3e87eb">
+               <font>
+                  <Font name="Cambria Bold" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
