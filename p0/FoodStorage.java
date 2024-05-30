@@ -2,7 +2,6 @@ package p0;
 
 import java.util.ArrayList;
 import java.time.LocalDate;
-import java.util.Date;
 
 public class FoodStorage {
     private String name;
@@ -10,13 +9,11 @@ public class FoodStorage {
     private ArrayList<Food> expiredFoods;
     private ArrayList<Food> foods;
     private ArrayList<Food> expiringFoods;
-    private float capacity;
 
     // Constructor
-    public FoodStorage(String name, float temperature, float capacity) {
+    public FoodStorage(String name, float temperature) {
         this.name = name;
         this.temperature = temperature;
-        this.capacity = capacity;
         this.foods = new ArrayList<>();
         this.expiredFoods = new ArrayList<>();
         this.expiringFoods = new ArrayList<>();
@@ -83,10 +80,6 @@ public class FoodStorage {
         return temperature;
     }
 
-    public float getCapacity() {
-        return capacity;
-    }
-
     // maybe need more for foods' name
     public ArrayList<String> getFoods() {
         return getFoodNames(foods);
@@ -110,7 +103,7 @@ public class FoodStorage {
 
     // Main method for testing
     public static void main(String[] args) {
-        FoodStorage storage = new FoodStorage("My Storage", 5.0f, 100.0f);
+        FoodStorage storage = new FoodStorage("My Storage", 5.0f);
         
         LocalDate expirationDate0 = LocalDate.of(2024, 05, 17);
         LocalDate expirationDate1 = LocalDate.of(2024, 05, 15);
