@@ -22,7 +22,7 @@
                <children>
                   <Button fx:id="Homebtn" mnemonicParsing="false" onAction="#TurntoHome" prefHeight="38.0" prefWidth="209.0" style="-fx-background-color: #3f3e87; -fx-background-radius: 8;" stylesheets="@Start_btn.css" text="Home" textAlignment="CENTER" textFill="#fdfbfb">
                      <font>
-                        <Font name="Cambria" size="48.0" />
+                        <Font name="Cambria" size="16.0" />
                      </font>
                   </Button>
                   <Button fx:id="Foodbtn" mnemonicParsing="false" onAction="#TurntoFood" prefHeight="38.0" prefWidth="209.0" style="-fx-background-color: #3f3e87; -fx-background-radius: 8;" stylesheets="@Start_btn.css" text="Food" textAlignment="CENTER" textFill="#fdfbfb">

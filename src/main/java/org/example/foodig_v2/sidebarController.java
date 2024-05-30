@@ -55,7 +55,7 @@ public class sidebarController implements Initializable {
     @FXML
     private void TurntoFood(ActionEvent event) {
         try {
-            scene_controller.switchToMenu(event);
+            scene_controller.switchToFood(event);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -64,7 +64,7 @@ public class sidebarController implements Initializable {
     @FXML
     private void TurntoMouse(ActionEvent event) {
         try {
-            scene_controller.switchToFood(event);
+            scene_controller.switchToMouse(event);
         } catch (IOException e) {
             e.printStackTrace();
         }
