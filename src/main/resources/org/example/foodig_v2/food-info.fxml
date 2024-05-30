@@ -5,25 +5,50 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.ColorInput?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="570.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.foodig_v2.FoodInfo">
+<AnchorPane prefHeight="580.0" prefWidth="300.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.foodig_v2.FoodInfo">
    <children>
       <AnchorPane prefHeight="47.0" prefWidth="300.0">
          <children>
-            <ImageView fx:id="Image_BackArrow" fitHeight="30.0" fitWidth="30.0" layoutX="9.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="Image_BackArrow" fitHeight="23.0" fitWidth="24.0" layoutX="9.0" layoutY="12.0" onMousePressed="#GotoMenu" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="9.0">
                <image>
                   <Image url="@image/back-arrow.png" />
                </image>
+               <effect>
+                  <ColorAdjust>
+                     <input>
+                        <Blend mode="SRC_ATOP">
+                           <topInput>
+                              <ColorInput height="80.15" paint="#3f3e87" width="93.25" />
+                           </topInput>
+                        </Blend>
+                     </input>
+                  </ColorAdjust>
+               </effect>
             </ImageView>
-            <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="260.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="Image_Mouse" fitHeight="31.0" fitWidth="31.0" layoutX="260.0" layoutY="10.0" onMousePressed="#GotoMenu" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@image/mouse.png" />
                </image>
+               <effect>
+                  <ColorAdjust>
+                     <input>
+                        <Blend mode="SRC_ATOP">
+                           <topInput>
+                              <ColorInput height="110.74" paint="#3f3e87" width="87.43" />
+                           </topInput>
+                        </Blend>
+                     </input>
+                  </ColorAdjust>
+               </effect>
             </ImageView>
          </children>
       </AnchorPane>
@@ -34,24 +59,35 @@
                   <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="7.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
                      <image>
                         <Image url="@image/vegetable.png" />
-                     </image></ImageView>
+                     </image>
+                     <effect>
+                        <ColorAdjust>
+                           <input>
+                              <Blend mode="SRC_ATOP">
+                                 <topInput>
+                                    <ColorInput height="122.4" paint="#3f3e87" width="102.0" />
+                                 </topInput>
+                              </Blend>
+                           </input>
+                        </ColorAdjust>
+                     </effect></ImageView>
                </children>
             </AnchorPane>
             <VBox layoutX="11.2" layoutY="5.0" prefHeight="190.0" prefWidth="130.0" spacing="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
                <children>
-                  <Label text="名稱" />
+                  <Label text="名稱" textFill="#3f3e87" />
                   <TextField fx:id="TextField_FoodNameInput" prefHeight="23.0" prefWidth="130.0" promptText="輸入食物名稱" />
-                  <Label text="保存期限" />
+                  <Label text="保存期限" textFill="#3f3e87" />
                   <DatePicker fx:id="DatePicker_ExpiredDate" />
-                  <Label text="製造日期" />
+                  <Label text="製造日期" textFill="#3f3e87" />
                   <DatePicker fx:id="DatePicker_ManufactureDate" />
-                  <Label text="類型" />
+                  <Label text="類型" textFill="#3f3e87" />
                   <ChoiceBox fx:id="ChoiceBox_FoodType" prefWidth="150.0" />
                </children>
             </VBox>
             <AnchorPane layoutX="171.0" layoutY="159.0" prefHeight="57.0" prefWidth="120.0" AnchorPane.rightAnchor="10.0">
                <children>
-                  <Label layoutX="14.0" layoutY="7.0" text="狀態" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                  <Label layoutX="14.0" layoutY="7.0" text="狀態" textFill="#3f3e87" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
                   <Label fx:id="Label_FoodStatus" layoutX="12.0" layoutY="27.0" text="尚未到期" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="25.0">
                      <font>
                         <Font size="14.0" />
@@ -59,7 +95,7 @@
                   </Label>
                </children>
             </AnchorPane>
-            <Label layoutX="11.0" layoutY="210.0" text="備註" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="205.0" />
+            <Label layoutX="11.0" layoutY="210.0" text="備註" textFill="#3f3e87" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="205.0" />
             <TextArea fx:id="TextArea_FoodRemark" layoutX="8.0" layoutY="253.0" prefHeight="46.4" prefWidth="280.0" promptText="輸入食物備註" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="225.0" />
          </children>
       </AnchorPane>

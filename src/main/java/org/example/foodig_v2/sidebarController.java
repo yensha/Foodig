@@ -1,12 +1,16 @@
 package org.example.foodig_v2;
 
+import javafx.animation.FadeTransition;
+import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.*;
 import javafx.fxml.Initializable;
+import javafx.util.Duration;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.io.IOException;
@@ -18,6 +22,9 @@ public class sidebarController implements Initializable {
 
     @FXML
     private AnchorPane side_pane;
+
+    @FXML
+    private Pane foodig_pane;
 
     @FXML
     private Button Homebtn;
@@ -39,9 +46,13 @@ public class sidebarController implements Initializable {
         side_pane.setVisible(false);
 
         sidebar.setOnMouseClicked(event -> {
-            side_pane.setVisible(!side_pane.isVisible());
+            side_pane.setVisible(true);
+        });
+        foodig_pane.setOnMouseClicked(event -> {
+            side_pane.setVisible(false);
         });
     }
+
 
     @FXML
     private void TurntoHome(ActionEvent event)  {

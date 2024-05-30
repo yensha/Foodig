@@ -1,6 +1,7 @@
 package org.example.foodig_v2;
 
-import javafx.event.ActionEvent;
+import javafx.event.*;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.Node;
@@ -37,6 +38,21 @@ public class SceneController {
         stage.show();
     }
     public void switchToMouse(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("Start.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void switchToMenu(MouseEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("menu.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void switchToMouse(MouseEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("Start.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
