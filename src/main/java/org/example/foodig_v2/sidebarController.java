@@ -5,6 +5,7 @@ import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
@@ -36,6 +37,9 @@ public class sidebarController implements Initializable {
     private Button Mousebtn;
 
     @FXML
+    private Button AddFoodbtn;
+
+    @FXML
     private Button Settingbtn;
 
     private SceneController scene_controller;
@@ -64,7 +68,7 @@ public class sidebarController implements Initializable {
     }
 
     @FXML
-    private void TurntoFood(ActionEvent event) {
+    private void TurntoFood(MouseEvent event) {
         try {
             scene_controller.switchToFood(event);
         } catch (IOException e) {
