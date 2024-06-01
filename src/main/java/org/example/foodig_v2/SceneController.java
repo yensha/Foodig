@@ -37,6 +37,13 @@ public class SceneController {
         stage.setScene(scene);
         stage.show();
     }
+    public void switchToFood(MouseEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("food-info.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
     public void switchToMouse(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("Start.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
