@@ -10,7 +10,10 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
@@ -45,112 +48,212 @@
             </AnchorPane>
             <AnchorPane prefHeight="533.0" prefWidth="300.0">
                <children>
-                  <VBox alignment="TOP_CENTER" prefHeight="533.0" prefWidth="300.0">
+                  <VBox prefHeight="533.0" prefWidth="300.0">
                      <children>
-                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@image/mouse1.png" />
-                           </image>
-                           <VBox.margin>
-                              <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
-                           </VBox.margin>
-                        </ImageView>
-                        <Label text="勞贖">
-                           <padding>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                           </padding>
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                        <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="45.0" prefWidth="300.0">
+                        <HBox alignment="CENTER" prefHeight="46.0" prefWidth="300.0">
                            <children>
-                              <Label text="飼料" textFill="#3f3e87">
-                                 <padding>
-                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                                 </padding>
-                              </Label>
+                              <ImageView fx:id="Image_Mouse1" fitHeight="31.0" fitWidth="31.0"  pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@image/coin.png" />
+                                 </image>
+                                 <effect>
+                                    <ColorAdjust>
+                                       <input>
+                                          <Blend mode="SRC_ATOP">
+                                             <topInput>
+                                                <ColorInput height="110.74" paint="#3f3e87" width="87.43" />
+                                             </topInput>
+                                          </Blend>
+                                       </input>
+                                    </ColorAdjust>
+                                 </effect>
+                              </ImageView>
                               <Label minHeight="-Infinity" minWidth="-Infinity" text="000">
                                  <padding>
-                                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                                  </padding>
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </Label>
                            </children>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
                         </HBox>
-                        <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="45.0" prefWidth="300.0">
+                        <GridPane prefHeight="492.0" prefWidth="300.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="150.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="150.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="150.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="25.0" valignment="CENTER" />
+                              <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="25.0" valignment="CENTER" />
+                              <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="150.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="25.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="25.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
                            <children>
-                              <Label text="飽食度" textFill="#3f3e87">
-                                 <padding>
-                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                                 </padding>
-                              </Label>
-                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@image/full.png" />
+                                    <Image url="@image/mouse2.png" />
                                  </image>
-                                 <HBox.margin>
-                                    <Insets left="5.0" right="5.0" />
-                                 </HBox.margin>
                               </ImageView>
-                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
                                  <image>
-                                    <Image url="@image/full.png" />
+                                    <Image url="@image/mouse3.png" />
                                  </image>
-                                 <HBox.margin>
-                                    <Insets left="5.0" right="5.0" />
-                                 </HBox.margin>
                               </ImageView>
-                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@image/full.png" />
-                                 </image>
-                                 <HBox.margin>
-                                    <Insets left="5.0" right="5.0" />
-                                 </HBox.margin>
-                              </ImageView>
-                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@image/full.png" />
-                                 </image>
-                                 <HBox.margin>
-                                    <Insets left="5.0" right="5.0" />
-                                 </HBox.margin>
-                              </ImageView>
-                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@image/full.png" />
-                                 </image>
-                                 <HBox.margin>
-                                    <Insets left="5.0" right="5.0" />
-                                 </HBox.margin>
-                              </ImageView>
-                           </children>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </HBox>
-                        <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="45.0" prefWidth="300.0">
-                           <children>
-                              <Label text="金幣" textFill="#3f3e87">
-                                 <padding>
-                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                                 </padding>
-                              </Label>
-                              <Label minHeight="-Infinity" minWidth="-Infinity" text="000">
-                                 <padding>
-                                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
-                                 </padding>
+                              <Label text="鼠餅" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </Label>
-                              <Button contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" style="-fx-background-radius: 20;" stylesheets="@GetCoin_btn.css" text="領取" textAlignment="CENTER" textFill="WHITE">
+                              <Label text="滑鼠" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Button alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" style="-fx-background-radius: 20;" stylesheets="@GetCoin_btn.css" text="購買" textAlignment="CENTER" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                 <opaqueInsets>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" />
+                                 </opaqueInsets>
+                                 <padding>
+                                    <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                                 </padding>
+                              </Button>
+                              <Button contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" style="-fx-background-radius: 20;" stylesheets="@GetCoin_btn.css" text="購買" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                 <opaqueInsets>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" />
+                                 </opaqueInsets>
+                                 <padding>
+                                    <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                                 </padding>
+                              </Button>
+                              <HBox alignment="CENTER" prefHeight="72.0" prefWidth="300.0" GridPane.rowIndex="2">
+                                 <children>
+                                    <ImageView fx:id="Image_Mouse11" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@image/coin.png" />
+                                       </image>
+                                       <effect>
+                                          <ColorAdjust>
+                                             <input>
+                                                <Blend mode="SRC_ATOP">
+                                                   <topInput>
+                                                      <ColorInput height="110.74" paint="#3f3e87" width="87.43" />
+                                                   </topInput>
+                                                </Blend>
+                                             </input>
+                                          </ColorAdjust>
+                                       </effect>
+                                    </ImageView>
+                                    <Label minHeight="-Infinity" minWidth="-Infinity" text="000">
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="72.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <children>
+                                    <ImageView fx:id="Image_Mouse111" fitHeight="20.0" fitWidth="20.0"  pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@image/coin.png" />
+                                       </image>
+                                       <effect>
+                                          <ColorAdjust>
+                                             <input>
+                                                <Blend mode="SRC_ATOP">
+                                                   <topInput>
+                                                      <ColorInput height="110.74" paint="#3f3e87" width="87.43" />
+                                                   </topInput>
+                                                </Blend>
+                                             </input>
+                                          </ColorAdjust>
+                                       </effect>
+                                    </ImageView>
+                                    <Label minHeight="-Infinity" minWidth="-Infinity" text="000">
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4">
+                                 <image>
+                                    <Image url="@image/burgermouse.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="黃金招財鼠來堡" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="回復藥" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <HBox alignment="CENTER" prefHeight="72.0" prefWidth="300.0" GridPane.rowIndex="6">
+                                 <children>
+                                    <ImageView fx:id="Image_Mouse112" fitHeight="20.0" fitWidth="20.0"  pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@image/coin.png" />
+                                       </image>
+                                       <effect>
+                                          <ColorAdjust>
+                                             <input>
+                                                <Blend mode="SRC_ATOP">
+                                                   <topInput>
+                                                      <ColorInput height="110.74" paint="#3f3e87" width="87.43" />
+                                                   </topInput>
+                                                </Blend>
+                                             </input>
+                                          </ColorAdjust>
+                                       </effect>
+                                    </ImageView>
+                                    <Label minHeight="-Infinity" minWidth="-Infinity" text="000">
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="72.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                 <children>
+                                    <ImageView fx:id="Image_Mouse113" fitHeight="20.0" fitWidth="20.0"  pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@image/coin.png" />
+                                       </image>
+                                       <effect>
+                                          <ColorAdjust>
+                                             <input>
+                                                <Blend mode="SRC_ATOP">
+                                                   <topInput>
+                                                      <ColorInput height="110.74" paint="#3f3e87" width="87.43" />
+                                                   </topInput>
+                                                </Blend>
+                                             </input>
+                                          </ColorAdjust>
+                                       </effect>
+                                    </ImageView>
+                                    <Label minHeight="-Infinity" minWidth="-Infinity" text="000">
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Button alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" style="-fx-background-radius: 20;" stylesheets="@GetCoin_btn.css" text="購買" textAlignment="CENTER" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                                 <opaqueInsets>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" />
+                                 </opaqueInsets>
+                                 <padding>
+                                    <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                                 </padding>
+                              </Button>
+                              <Button alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" style="-fx-background-radius: 20;" stylesheets="@GetCoin_btn.css" text="購買" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
                                  <opaqueInsets>
                                     <Insets bottom="10.0" left="10.0" right="10.0" />
                                  </opaqueInsets>
@@ -161,11 +264,30 @@
                                     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                                  </HBox.margin>
                               </Button>
+                              <ImageView fx:id="Image_Mouse1111" fitHeight="110.0" fitWidth="110.0"  pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                 <image>
+                                    <Image url="@image/potion.png" />
+                                 </image>
+                                 <effect>
+                                    <ColorAdjust>
+                                       <input>
+                                          <Blend mode="SRC_ATOP">
+                                             <topInput>
+                                                <ColorInput height="175.46" paint="#3f3e87" width="181.92" />
+                                             </topInput>
+                                          </Blend>
+                                       </input>
+                                    </ColorAdjust>
+                                 </effect>
+                              </ImageView>
                            </children>
-                        </HBox>
+                        </GridPane>
                      </children>
                   </VBox>
                </children>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
             </AnchorPane>
          </children>
       </VBox>
