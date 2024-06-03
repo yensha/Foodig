@@ -119,5 +119,6 @@ public class Food {
         Carrot.setRemark("Yeh");
 
         System.out.println(Carrot.getRemark());
+        System.out.println(Carrot.getExpirationDate());
     }
 }
