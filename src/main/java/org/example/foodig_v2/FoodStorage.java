@@ -3,43 +3,36 @@ package org.example.foodig_v2;
 import java.util.ArrayList;
 import java.time.LocalDate;
 
-public class FoodStorage {
-    private String name;
-//    private float temperature;
-    private ArrayList<Food> expiredFoods;
-    private ArrayList<Food> foods;
-    private ArrayList<Food> expiringFoods;
+// static!!!!!!!!!!
 
-    // Constructor
-    public FoodStorage(String name) {
-        this.name = name;
-//        this.temperature = temperature;
-        this.foods = new ArrayList<>();
-        this.expiredFoods = new ArrayList<>();
-        this.expiringFoods = new ArrayList<>();
-    }
+public class FoodStorage {
+    private static ArrayList<Food> foods = new ArrayList<>();;
+    private static ArrayList<Food> expiredFoods = new ArrayList<>();;
+    private static ArrayList<Food> expiringFoods = new ArrayList<>();;
+    private static ArrayList<Food> otherFoods = new ArrayList<>();;
 
     // Method to add food
-    public void addFood(String name, String type, LocalDate expirationDate, LocalDate manufacturedDate) {
+    public static void addFood(String name, String type, LocalDate expirationDate, LocalDate manufacturedDate) {
         Food newFood = new Food(name, type, expirationDate, manufacturedDate);
         foods.add(newFood);
         reload(); // Reload expired and expiring foods after adding new food
     }
 
     // Method to delete food by name
-    public void deleteFood(String name) {
+    public static void deleteFood(String name) {
         foods.removeIf(food -> food.getName().equals(name));
         reload(); // Reload expired and expiring foods after deleting food
     }
 
     // Method to reload all lists
-    public void reload() {
+    public static void reload() {
         reloadExpiredFoods();
         reloadExpiringFoods();
+        reloadOtherFoods();
     }
 
     // Method to reload expired foods list
-    public void reloadExpiredFoods() {
+    public static void reloadExpiredFoods() {
         expiredFoods.clear();
         for (Food food : foods) {
             food.checkExpired();
@@ -50,7 +43,7 @@ public class FoodStorage {
     }
 
     // Method to reload expiring foods list
-    public void reloadExpiringFoods() {
+    public static void reloadExpiringFoods() {
         expiringFoods.clear();
         for (Food food : foods) {
             food.checkExpiring();
@@ -60,40 +53,56 @@ public class FoodStorage {
         }
     }
 
+    // Method to reload other foods list
+    public static void reloadOtherFoods() {
+        otherFoods.clear();
+        for (Food food : foods) {
+            food.checkExpired();
+            food.checkExpiring();
+            if (!food.isExpired() && !food.isExpiring()) {
+                otherFoods.add(food);
+            }
+        }
+    }
+
     // Method to delete expired foods
-    public void deleteExpiredFoods() {
+    public static void deleteExpiredFoods() {
         foods.removeIf(Food::isExpired);
         reload(); // Reload expired and expiring foods after deleting expired foods
     }
 
     // Method to get today date
-    public LocalDate getTodayDate() {
+    public static LocalDate getTodayDate() {
         return LocalDate.now();
     }
 
-    // Getter methods
-    public String getName() {
-        return name;
+    public static ArrayList<Food> getFoods() {
+        return foods;
     }
-
-//    public float getTemperature() {
-//        return temperature;
-//    }
-
+    public static ArrayList<Food> getExpiredFoods() {
+        return expiredFoods;
+    }
+    public static ArrayList<Food> getExpiringFoods() {
+        return expiringFoods;
+    }
+    public static ArrayList<Food> getOtherFoods() {
+        return otherFoods;
+    }
     // maybe need more for foods' name
-    public ArrayList<String> getFoods() {
+    public static ArrayList<String> getFoodsName() {
         return getFoodNames(foods);
     }
-    
-    public ArrayList<String> getExpiredFoods() {
+    public static ArrayList<String> getExpiredFoodsName() {
         return getFoodNames(expiredFoods);
     }
-
-    public ArrayList<String> getExpiringFoods() {
+    public static ArrayList<String> getExpiringFoodsName() {
         return getFoodNames(expiringFoods);
     }
+    public static ArrayList<String> getOtherFoodsName() {
+        return getFoodNames(otherFoods);
+    }
 
-    public ArrayList<String> getFoodNames(ArrayList<Food> foods) {
+    public static ArrayList<String> getFoodNames(ArrayList<Food> foods) {
         ArrayList<String> foodNames = new ArrayList<>();
         for (Food food : foods) {
             foodNames.add(food.getName());
@@ -103,28 +112,30 @@ public class FoodStorage {
 
     // Main method for testing
     public static void main(String[] args) {
-        FoodStorage storage = new FoodStorage("My Storage");
-        
-        LocalDate expirationDate0 = LocalDate.of(2024, 05, 17);
-        LocalDate expirationDate1 = LocalDate.of(2024, 05, 15);
-        LocalDate expirationDate2 = LocalDate.of(2024, 05, 13);
-        LocalDate manufacturedDate = LocalDate.of(2024, 05, 10);
+
+        LocalDate expirationDate0 = LocalDate.of(2024, 6, 17);
+        LocalDate expirationDate1 = LocalDate.of(2024, 6, 4);
+        LocalDate expirationDate2 = LocalDate.of(2024, 5, 13);
+        LocalDate manufacturedDate = LocalDate.of(2024, 5, 10);
         // Add some foods
-        storage.addFood("Apple", "Fruit", expirationDate0, manufacturedDate);
-        storage.addFood("Banana", "Fruit", expirationDate1, manufacturedDate);
-        storage.addFood("Cheese", "Dairy", expirationDate2, manufacturedDate);
-        
+        addFood("Apple", "Fruit", expirationDate0, manufacturedDate);
+        addFood("Banana", "Fruit", expirationDate1, manufacturedDate);
+        addFood("Cheese", "Dairy", expirationDate2, manufacturedDate);
+
         // Display foods
-        System.out.println("All Foods: " + storage.getFoods());
-        System.out.println("Expired Foods: " + storage.getExpiredFoods());
-        System.out.println("Expiring Foods: " + storage.getExpiringFoods());
-        
+        System.out.println("All Foods: " + getFoodsName());
+        System.out.println("Expired Foods: " + getExpiredFoodsName());
+        System.out.println("Expiring Foods: " + getExpiringFoodsName());
+        System.out.println("Other Foods: " + getOtherFoodsName());
+
+        deleteFood("Apple");
         // Delete expired foods
-        storage.deleteExpiredFoods();
-        
+        deleteExpiredFoods();
+
         // Display foods after deleting expired foods
-        System.out.println("All Foods after deleting expired foods: " + storage.getFoods());
-        System.out.println("Expired Foods after deletion: " + storage.getExpiredFoods());
-        System.out.println("Expiring Foods after deletion: " + storage.getExpiringFoods());
+        System.out.println("All Foods after deleting expired foods: " + getFoodsName());
+        System.out.println("Expired Foods after deletion: " + getExpiredFoodsName());
+        System.out.println("Expiring Foods after deletion: " + getExpiringFoodsName());
+        System.out.println("Other Foods after deletion:: " + getOtherFoodsName());
     }
 }
