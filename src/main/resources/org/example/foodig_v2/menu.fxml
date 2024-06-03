@@ -13,20 +13,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="300.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.foodig_v2.sidebarController">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.foodig_v2.sidebarController">
    <children>
       <Pane fx:id="foodig_pane" prefHeight="580.0" prefWidth="300.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-      <AnchorPane layoutY="534.0" prefHeight="50.0" prefWidth="300.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="525.0">
-         <children>
-            <Button fx:id="AddFoodbtn" alignment="CENTER" contentDisplay="TOP" layoutX="134.0" layoutY="-2.0" mnemonicParsing="false" onMousePressed="#TurntoFood" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #3f3e87; -fx-background-radius: 300;" text="+" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="125.0" AnchorPane.rightAnchor="125.0" AnchorPane.topAnchor="0.0">
-               <font>
-                  <Font name="Cambria Bold" size="20.0" />
-               </font>
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets></Button>
-         </children>
-      </AnchorPane>
       <AnchorPane fx:id="side_pane" layoutY="53.0" prefHeight="527.0" prefWidth="209.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="50.0">
          <children>
             <VBox layoutX="40.0" layoutY="53.0" prefHeight="465.0" prefWidth="173.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -36,7 +25,7 @@
                         <Font name="Cambria" size="16.0" />
                      </font>
                   </Button>
-                  <Button fx:id="Foodbtn" mnemonicParsing="false" onMousePressed="#TurntoFood" prefHeight="38.0" prefWidth="209.0" style="-fx-background-color: #3f3e87; -fx-background-radius: 8;" stylesheets="@Start_btn.css" text="Food" textAlignment="CENTER" textFill="#fdfbfb">
+                  <Button fx:id="Foodbtn" mnemonicParsing="false" onAction="#TurntoFood" prefHeight="38.0" prefWidth="209.0" style="-fx-background-color: #3f3e87; -fx-background-radius: 8;" stylesheets="@Start_btn.css" text="Food" textAlignment="CENTER" textFill="#fdfbfb">
                      <font>
                         <Font name="Cambria" size="16.0" />
                      </font>
@@ -141,7 +130,7 @@
             </VBox>
          </children>
       </AnchorPane>
-      <AnchorPane prefHeight="48.0" prefWidth="308.0" AnchorPane.bottomAnchor="534.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane prefHeight="48.0" prefWidth="300.0" AnchorPane.bottomAnchor="534.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Label alignment="TOP_CENTER" contentDisplay="BOTTOM" layoutY="3.0" prefHeight="38.0" prefWidth="240.0" text="Foodig" textAlignment="CENTER" textFill="#3f3e87eb" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="10.0">
                <font>
