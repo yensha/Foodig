@@ -1,38 +1,47 @@
 package org.example.foodig_v2;
 
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.Scene;
-import javafx.scene.control.ScrollPane;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.GridPane;
-
+import javafx.fxml.Initializable;
 import javafx.scene.input.MouseEvent;
-import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
-import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-public class FoodTableController implements Initializable {
+public class ShopController implements Initializable {
     @FXML
-    private GridPane grid;
+    private ImageView Image_Mouse1;
 
     @FXML
-    private ScrollPane scroll;
+    private ImageView Image_Mouse11;
+    @FXML
+    private ImageView Image_Mouse111;
+    @FXML
+    private ImageView Image_Mouse112;
+    @FXML
+    private ImageView Image_Mouse113;
+
+    @FXML
+    private ImageView Image_Mouse1111;
 
     @FXML
     private ImageView back;
+
+    @FXML
+    private ImageView Image_Shop;
+
     private SceneController scenecontroller;
 
+    @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         scenecontroller = new SceneController();
     }
-
     public void BacktoMenu(MouseEvent event) throws IOException {
         scenecontroller.switchToMenu(event);
+    }
+    public void TurntoShop(MouseEvent event) throws IOException {
+        scenecontroller.switchToShop(event);
     }
 
 }

@@ -1,10 +1,15 @@
 package org.example.foodig_v2;
 
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
+import javafx.fxml.Initializable;
 
-public class FoodItemController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class FoodItemController implements Initializable {
     @FXML
     private ImageView Imgview_Foodimg;
 
@@ -13,4 +18,7 @@ public class FoodItemController {
 
     @FXML
     private Label Label_Foodname;
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+    }
 }

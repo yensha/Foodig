@@ -11,15 +11,38 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.foodig_v2.sidebarController">
    <children>
-      <Pane fx:id="foodig_pane" prefHeight="580.0" prefWidth="300.0" style="-fx-background-color: white;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-      <AnchorPane fx:id="side_pane" layoutY="53.0" prefHeight="527.0" prefWidth="209.0" style="-fx-background-color: white;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="50.0">
+      <VBox layoutY="48.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="533.0" prefWidth="300.0" AnchorPane.topAnchor="48.0">
+         <children>
+            <ScrollPane fx:id="scroll" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="533.0" prefWidth="300.0" VBox.vgrow="ALWAYS">
+               <content>
+                  <GridPane fx:id="grid">
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="525.0">
+         <children>
+            <Button fx:id="AddFoodbtn" blendMode="SRC_ATOP" mnemonicParsing="false" onMousePressed="#TurntoAddFoodbtn" style="-fx-background-color: #3f3e87; -fx-background-radius: 300;" text="+" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="125.0" AnchorPane.rightAnchor="125.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="side_pane" layoutY="53.0" prefHeight="527.0" prefWidth="209.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="50.0">
          <children>
             <VBox layoutX="40.0" layoutY="53.0" prefHeight="465.0" prefWidth="173.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
@@ -27,8 +50,11 @@
                      <font>
                         <Font name="Cambria" size="16.0" />
                      </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
                   </Button>
-                  <Button fx:id="Foodbtn" mnemonicParsing="false" onAction="#TurntoFood" prefHeight="38.0" prefWidth="209.0" style="-fx-background-color: #3f3e87; -fx-background-radius: 8;" stylesheets="@Start_btn.css" text="Food" textAlignment="CENTER" textFill="#fdfbfb">
+                  <Button fx:id="Foodbtn" mnemonicParsing="false" onMousePressed="#TurntoFood" prefHeight="38.0" prefWidth="209.0" style="-fx-background-color: #3f3e87; -fx-background-radius: 8;" stylesheets="@Start_btn.css" text="Food" textAlignment="CENTER" textFill="#fdfbfb">
                      <font>
                         <Font name="Cambria" size="16.0" />
                      </font>
@@ -52,11 +78,19 @@
                         <Insets top="10.0" />
                      </VBox.margin>
                   </Button>
+                  <Button fx:id="Shopbtn" mnemonicParsing="false" onMousePressed="#TurntoShop" prefHeight="38.0" prefWidth="209.0" style="-fx-background-color: #3f3e87; -fx-background-radius: 8;" stylesheets="@Start_btn.css" text="Shop" textAlignment="CENTER" textFill="#fdfbfb">
+                     <font>
+                        <Font name="Cambria" size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
                </children>
             </VBox>
             <VBox prefHeight="580.0" prefWidth="40.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="168.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <ImageView fitHeight="41.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="38.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@image/pngtree-vector-house-icon-png-image_708543-removebg-preview.png" />
                      </image>
@@ -71,8 +105,11 @@
                            </input>
                         </ColorAdjust>
                      </effect>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
                   </ImageView>
-                  <ImageView fitHeight="41.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@image/food-service.png" />
                      </image>
@@ -91,7 +128,7 @@
                         <Insets top="10.0" />
                      </VBox.margin>
                   </ImageView>
-                  <ImageView fitHeight="41.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="38.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@image/mouse.png" />
                      </image>
@@ -110,7 +147,7 @@
                         <Insets top="10.0" />
                      </VBox.margin>
                   </ImageView>
-                  <ImageView fitHeight="41.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="38.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@image/setting.png" />
                      </image>
@@ -126,7 +163,26 @@
                         </ColorAdjust>
                      </effect>
                      <VBox.margin>
-                        <Insets top="10.0" />
+                        <Insets top="13.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <ImageView fitHeight="38.0" fitWidth="35.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/shopping_cart.png" />
+                     </image>
+                     <effect>
+                        <ColorAdjust>
+                           <input>
+                              <Blend mode="SRC_ATOP">
+                                 <topInput>
+                                    <ColorInput height="61.2" paint="#3f3e87" width="52.45" />
+                                 </topInput>
+                              </Blend>
+                           </input>
+                        </ColorAdjust>
+                     </effect>
+                     <VBox.margin>
+                        <Insets top="13.0" />
                      </VBox.margin>
                   </ImageView>
                </children>
@@ -147,18 +203,5 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <VBox layoutY="48.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="533.0" prefWidth="300.0" AnchorPane.topAnchor="48.0">
-         <children>
-            <ScrollPane fx:id="scroll" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="533.0" prefWidth="300.0" VBox.vgrow="ALWAYS">
-               <content>
-                  <GridPane fx:id="grid">
-                     <rowConstraints>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                     </rowConstraints>
-                  </GridPane>
-               </content>
-            </ScrollPane>
-         </children>
-      </VBox>
    </children>
 </AnchorPane>
