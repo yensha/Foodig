@@ -2,21 +2,30 @@ package org.example.foodig_v2;
 
 public class Mouse {
     protected String name;
-    protected int coin_generate_speed;
+    protected int coinGenerateSpeed;
     protected double satiety;
     protected boolean isPoison;
 
-    public String getName(){
-        return name;
-    }
-    public int get_coin_generate_speed(){
-        return coin_generate_speed;
+    public Mouse(String name, int coinGenerateSpeed, double satiety, boolean isPoison) {
+        this.name = name;
+        this.coinGenerateSpeed = coinGenerateSpeed;
+        this.satiety = satiety;
+        this.isPoison = isPoison;
     }
 
-    public double get_satiety(){
+    public String getName() {
+        return name;
+    }
+
+    public int getCoinGenerateSpeed() {
+        return coinGenerateSpeed;
+    }
+
+    public double getSatiety() {
         return satiety;
     }
-    public Boolean get_IsPoison(){
+
+    public boolean isPoison() {
         return isPoison;
     }
 }
