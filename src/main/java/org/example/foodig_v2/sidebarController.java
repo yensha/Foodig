@@ -7,10 +7,12 @@ import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.control.Button;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.fxml.Initializable;
 import javafx.util.Duration;
+
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -41,6 +43,12 @@ public class sidebarController implements Initializable {
 
     @FXML
     private Button Settingbtn;
+
+    @FXML
+    private GridPane grid;
+
+    @FXML
+    private ScrollPane scroll;
 
     private SceneController scene_controller;
 

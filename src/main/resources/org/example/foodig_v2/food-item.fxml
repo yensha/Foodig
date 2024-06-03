@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="50.0" prefWidth="280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.foodig_v2.FoodItemController">
+   <children>
+      <HBox prefHeight="50.0" prefWidth="280.0" spacing="15.0">
+         <children>
+            <ImageView fx:id="Imgview_Foodimg" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/dairy-products.png" />
+               </image>
+            </ImageView>
+            <VBox prefHeight="40.0" prefWidth="230.0">
+               <children>
+                  <Label fx:id="Label_Foodname" text="豆漿">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <HBox prefHeight="16.0" prefWidth="230.0">
+                     <children>
+                        <Label text="期限：" />
+                        <Label fx:id="Label_Expdate" text="2023-05-13" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+         </padding>
+      </HBox>
+   </children>
+</AnchorPane>
