@@ -26,8 +26,6 @@ public class sidebarController implements Initializable {
     @FXML
     private AnchorPane side_pane;
 
-    @FXML
-    private Pane foodig_pane;
 
     @FXML
     private Button Homebtn;
@@ -60,7 +58,7 @@ public class sidebarController implements Initializable {
         sidebar.setOnMouseClicked(event -> {
             side_pane.setVisible(true);
         });
-        foodig_pane.setOnMouseClicked(event -> {
+        scroll.setOnMouseClicked(event -> {
             side_pane.setVisible(false);
         });
     }
@@ -100,5 +98,9 @@ public class sidebarController implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+    @FXML
+    private void TurntoAddFoodbtn(MouseEvent event) throws IOException {
+        scene_controller.switchToAddFood(event);
     }
 }

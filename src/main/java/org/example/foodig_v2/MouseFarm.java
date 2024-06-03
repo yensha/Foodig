@@ -3,7 +3,7 @@ package org.example.foodig_v2;
 public class MouseFarm {
     static double Coin = 0; // Total Coin
     static int Feed = 0; // Mouse Food
-    double mousecoin = 0.0;
+    static double mousecoin = 0.0;
     static Mouse PetMouse = new RegularMouse();
 
     public void updateMousetoFlatMouse() {
@@ -20,7 +20,7 @@ public class MouseFarm {
     public void GenerateCoin(){
         mousecoin += PetMouse.getCoinGenerateSpeed() * PetMouse.getSatiety();
     }
-    public void AquireCoin(){
+    static public void AquireCoin(){
         Coin += mousecoin;
     }
     public void CheckPosioned(){
