@@ -50,6 +50,9 @@
                      <font>
                         <Font name="Cambria" size="16.0" />
                      </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
                   </Button>
                   <Button fx:id="Foodbtn" mnemonicParsing="false" onMousePressed="#TurntoFood" prefHeight="38.0" prefWidth="209.0" style="-fx-background-color: #3f3e87; -fx-background-radius: 8;" stylesheets="@Start_btn.css" text="Food" textAlignment="CENTER" textFill="#fdfbfb">
                      <font>
@@ -75,11 +78,19 @@
                         <Insets top="10.0" />
                      </VBox.margin>
                   </Button>
+                  <Button fx:id="Shopbtn" mnemonicParsing="false" onMousePressed="#TurntoShop" prefHeight="38.0" prefWidth="209.0" style="-fx-background-color: #3f3e87; -fx-background-radius: 8;" stylesheets="@Start_btn.css" text="Shop" textAlignment="CENTER" textFill="#fdfbfb">
+                     <font>
+                        <Font name="Cambria" size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
                </children>
             </VBox>
             <VBox prefHeight="580.0" prefWidth="40.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="168.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <ImageView fitHeight="41.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="38.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@image/pngtree-vector-house-icon-png-image_708543-removebg-preview.png" />
                      </image>
@@ -94,8 +105,11 @@
                            </input>
                         </ColorAdjust>
                      </effect>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
                   </ImageView>
-                  <ImageView fitHeight="41.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@image/food-service.png" />
                      </image>
@@ -114,7 +128,7 @@
                         <Insets top="10.0" />
                      </VBox.margin>
                   </ImageView>
-                  <ImageView fitHeight="41.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="38.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@image/mouse.png" />
                      </image>
@@ -133,7 +147,7 @@
                         <Insets top="10.0" />
                      </VBox.margin>
                   </ImageView>
-                  <ImageView fitHeight="41.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="38.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@image/setting.png" />
                      </image>
@@ -149,7 +163,26 @@
                         </ColorAdjust>
                      </effect>
                      <VBox.margin>
-                        <Insets top="10.0" />
+                        <Insets top="13.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <ImageView fitHeight="38.0" fitWidth="35.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/shopping_cart.png" />
+                     </image>
+                     <effect>
+                        <ColorAdjust>
+                           <input>
+                              <Blend mode="SRC_ATOP">
+                                 <topInput>
+                                    <ColorInput height="61.2" paint="#3f3e87" width="52.45" />
+                                 </topInput>
+                              </Blend>
+                           </input>
+                        </ColorAdjust>
+                     </effect>
+                     <VBox.margin>
+                        <Insets top="13.0" />
                      </VBox.margin>
                   </ImageView>
                </children>

@@ -43,6 +43,10 @@ public class sidebarController implements Initializable {
     private Button Settingbtn;
 
     @FXML
+    private Button Shopbtn;
+
+
+    @FXML
     private GridPane grid;
 
     @FXML
@@ -102,5 +106,9 @@ public class sidebarController implements Initializable {
     @FXML
     private void TurntoAddFoodbtn(MouseEvent event) throws IOException {
         scene_controller.switchToAddFood(event);
+    }
+    @FXML
+    private void TurntoShop(MouseEvent event) throws IOException {
+        scene_controller.switchToShop(event);
     }
 }
