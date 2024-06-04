@@ -33,8 +33,16 @@ public class Mouse {
         isPoison = poison;
     }
 
+    public void setSatiety(double satiety) {
+        this.satiety = satiety;
+    }
+
     public void addSatiety(double satiety) {
-        this.satiety += satiety;
+        if (this.getSatiety() < 1.5) {
+            this.satiety += satiety;
+        } else {
+            System.out.println("Mouse is full up.");
+        }
     }
 
 }

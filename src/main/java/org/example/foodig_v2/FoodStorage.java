@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.time.LocalDate;
 
 import static org.example.foodig_v2.MouseFarm.feedExpiredFood;
-import static org.example.foodig_v2.MouseFarm.feedFood;
+import static org.example.foodig_v2.MouseFarm.addFeed;
 
 // static!!!!!!!!!!
 
@@ -29,7 +29,7 @@ public class FoodStorage {
                 .isExpired()) {
             feedExpiredFood();
         } else {
-            feedFood();
+            addFeed();
         }
         foods.removeIf(food -> food.getName().equals(name));
         reload(); // Reload expired and expiring foods after deleting food

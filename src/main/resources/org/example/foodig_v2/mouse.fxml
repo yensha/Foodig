@@ -189,7 +189,7 @@
                                     <Font size="14.0" />
                                  </font>
                               </Label>
-                              <Button contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" style="-fx-background-radius: 20;" stylesheets="@GetCoin_btn.css" text="餵食" textAlignment="CENTER" textFill="WHITE">
+                              <Button fx:id="Feedbtn" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" style="-fx-background-radius: 20;" stylesheets="@GetCoin_btn.css" text="餵食" textAlignment="CENTER" textFill="WHITE">
                                  <opaqueInsets>
                                     <Insets bottom="10.0" left="10.0" right="10.0" />
                                  </opaqueInsets>
