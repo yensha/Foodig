@@ -9,6 +9,7 @@ module org.example.foodig_v2 {
 
     opens org.example.foodig_v2 to javafx.fxml;
     exports org.example.foodig_v2;
+
     exports org.example.foodig_v2.Mouse;
     opens org.example.foodig_v2.Mouse to javafx.fxml;
 }

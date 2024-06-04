@@ -17,6 +17,17 @@ public class FoodItemController implements Initializable {
 
     @FXML
     private Label Label_Foodname;
+
+    private Food food;
+
+    void setfoodData(Food foods){
+        this.food = foods;
+        Label_Foodname.setText(foods.getName());
+        //Label_Expdate.setText(foods.getExpirationDate());
+        //Image image = new Image(getClass().getResourceAsStream(foods.getImgSrc));
+        //Imgview_Foodimg.setImage(image);
+
+    }
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
     }
