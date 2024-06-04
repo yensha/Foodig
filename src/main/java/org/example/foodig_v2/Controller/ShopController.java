@@ -1,6 +1,7 @@
-package org.example.foodig_v2;
+package org.example.foodig_v2.Controller;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.fxml.Initializable;
 import javafx.scene.input.MouseEvent;
@@ -11,25 +12,17 @@ import java.util.ResourceBundle;
 
 public class ShopController implements Initializable {
     @FXML
-    private ImageView Image_Mouse1;
-
-    @FXML
-    private ImageView Image_Mouse11;
-    @FXML
-    private ImageView Image_Mouse111;
-    @FXML
-    private ImageView Image_Mouse112;
-    @FXML
-    private ImageView Image_Mouse113;
-
-    @FXML
-    private ImageView Image_Mouse1111;
-
-    @FXML
     private ImageView back;
-
     @FXML
     private ImageView Image_Shop;
+    @FXML
+    private Button BuyFlatMouse;
+    @FXML
+    private Button BuyComputerMouse;
+    @FXML
+    private Button BuyRichBurgerMouse;
+    @FXML
+    private Button Potion;
 
     private SceneController scenecontroller;
 

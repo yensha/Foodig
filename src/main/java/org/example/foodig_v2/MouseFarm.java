@@ -1,10 +1,10 @@
 package org.example.foodig_v2;
 
 public class MouseFarm {
-    static double Coin = 0; // Total Coin
-    static int Feed = 0; // Mouse Food
+    static public double Coin = 0; // Total Coin
+    static public int Feed = 0; // Mouse Food
     static double mousecoin = 0.0;
-    static Mouse PetMouse = new RegularMouse();
+    static public Mouse PetMouse = new RegularMouse();
 
     public void updateMousetoFlatMouse() {
         PetMouse = new FlatMouse();
