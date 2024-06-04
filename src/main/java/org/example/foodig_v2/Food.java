@@ -25,13 +25,13 @@ public class Food {
         this.remark = remark;
 //        this.imagePath = imagePath; "全穀雜糧", "豆魚蛋肉", "蔬菜", "水果", "乳品", "調味料"
         switch (type) {
-            case "全穀雜糧" -> this.imagePath = "src/main/resources/org/example/foodig_v2/image/rice.png";
-            case "豆魚蛋肉" -> this.imagePath = "src/main/resources/org/example/foodig_v2/image/protein.png";
-            case "蔬菜" -> this.imagePath = "src/main/resources/org/example/foodig_v2/image/vegetable.png";
-            case "水果" -> this.imagePath = "src/main/resources/org/example/foodig_v2/image/fruits.png";
-            case "乳品" -> this.imagePath = "src/main/resources/org/example/foodig_v2/image/dairy-products.png";
-            case "調味料" -> this.imagePath = "src/main/resources/org/example/foodig_v2/image/spices.png";
-            default -> this.imagePath = "src/main/resources/org/example/foodig_v2/food-service.png";
+            case "全穀雜糧" -> this.imagePath = "image/rice.png";
+            case "豆魚蛋肉" -> this.imagePath = "image/protein.png";
+            case "蔬菜" -> this.imagePath = "image/vegetable.png";
+            case "水果" -> this.imagePath = "image/fruits.png";
+            case "乳品" -> this.imagePath = "image/dairy-products.png";
+            case "調味料" -> this.imagePath = "image/spices.png";
+            default -> this.imagePath = "image/food-service.png";
         }
         reloadExpiredAndExpiring();
     }
@@ -86,7 +86,7 @@ public class Food {
     // Method to change the type of food
     public void setType(String newType) {
         this.type = newType;
-        switch (newType) {
+        switch (type) {
             case "全穀雜糧" -> this.imagePath = "image/rice.png";
             case "豆魚蛋肉" -> this.imagePath = "image/protein.png";
             case "蔬菜" -> this.imagePath = "image/vegetable.png";
