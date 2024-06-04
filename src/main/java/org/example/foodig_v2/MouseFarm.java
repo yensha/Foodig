@@ -13,6 +13,9 @@ public class MouseFarm {
     static public int Feed = 0; // Mouse Food
     static double mousecoin = 0.0;
     static public Mouse PetMouse = new RegularMouse();
+    private static final long TOTAL_DURATION_HOURS = 8;
+    private static final double MAX_COIN = PetMouse.getCoinGenerateSpeed() * PetMouse.getSatiety() *TOTAL_DURATION_HOURS;
+    private static final double COIN_PER_SECOND = MAX_COIN / (TOTAL_DURATION_HOURS );
 
     public static void updateMousetoFlatMouse() {
         PetMouse = new FlatMouse();
@@ -26,17 +29,20 @@ public class MouseFarm {
         PetMouse = new ComputerMouse();
     }
 
-    public static void GenerateCoin(){
-        if (!PetMouse.ispoison()) {
-            mousecoin += (int)(PetMouse.getCoinGenerateSpeed() * PetMouse.getSatiety());
-        }
+    public static void startCoinGeneration() {
+        ScheduledExecutorService executor = newSingleThreadScheduledExecutor();
+        executor.scheduleAtFixedRate(() -> {
+            if (!PetMouse.ispoison() && mousecoin < MAX_COIN) {
+                mousecoin += COIN_PER_SECOND;
+                if (mousecoin > MAX_COIN) {
+                    mousecoin = MAX_COIN;
+                }
+            }
+        }, 0, 1, TimeUnit.SECONDS);
     }
 
     static public void AquireCoin(){
         Coin += mousecoin;
-    }
-    public void CheckPosioned(){
-
     }
 
     public static void addFeed() {

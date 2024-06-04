@@ -99,10 +99,14 @@ public class MouseController implements Initializable {
         };
         timer.start();
 
+        MouseFarm.startCoinGeneration();
+
         Image image = new Image(String.valueOf(getClass().getResource(PetMouse.getImagePath())));
         MouseImage.setImage(image);
         System.out.println(PetMouse.getImagePath());
         System.out.println(PetMouse.getName());
+        System.out.println(MouseFarm.Coin);
+        System.out.println(MouseFarm.mousecoin);
 
     }
 
