@@ -57,7 +57,7 @@
          <children>
             <AnchorPane fx:id="Panel_FoodImage" prefHeight="120.0" prefWidth="120.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0">
                <children>
-                  <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="7.0" layoutY="11.0" opacity="0.69" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                  <ImageView fx:id="ImageView_FoodImage" fitHeight="100.0" fitWidth="100.0" layoutX="7.0" layoutY="11.0" opacity="0.69" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
                      <image>
                         <Image url="@image/vegetable.png" />
                      </image>
@@ -100,6 +100,6 @@
             <TextArea fx:id="TextArea_FoodRemark" layoutX="8.0" layoutY="253.0" prefHeight="46.4" prefWidth="280.0" promptText="輸入食物備註" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="225.0" />
          </children>
       </AnchorPane>
-      <Button fx:id="Button_SaveFoodInfo" layoutX="247.0" layoutY="328.0" mnemonicParsing="false" text="儲存" />
+      <Button fx:id="Button_SaveFoodInfo" layoutX="247.0" layoutY="328.0" mnemonicParsing="false" onAction="#saveFood" text="儲存" />
    </children>
 </AnchorPane>

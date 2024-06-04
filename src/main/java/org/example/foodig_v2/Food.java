@@ -1,5 +1,7 @@
 package org.example.foodig_v2;
 
+import javafx.scene.image.Image;
+
 import java.time.LocalDate;
 
 public class Food {
@@ -10,6 +12,7 @@ public class Food {
     private boolean expiring;
     private boolean expired;
     private String remark;
+    private String imagePath;
 
     // Constructor
     public Food(String name, String type, LocalDate expirationDate, LocalDate manufacturedDate, String remark) {
@@ -20,6 +23,16 @@ public class Food {
         this.expiring = false;
         this.expired = false;
         this.remark = remark;
+//        this.imagePath = imagePath; "全穀雜糧", "豆魚蛋肉", "蔬菜", "水果", "乳品", "調味料"
+        switch (type) {
+            case "全穀雜糧" -> this.imagePath = "src/main/resources/org/example/foodig_v2/image/rice.png";
+            case "豆魚蛋肉" -> this.imagePath = "src/main/resources/org/example/foodig_v2/image/protein.png";
+            case "蔬菜" -> this.imagePath = "src/main/resources/org/example/foodig_v2/image/vegetable.png";
+            case "水果" -> this.imagePath = "src/main/resources/org/example/foodig_v2/image/fruits.png";
+            case "乳品" -> this.imagePath = "src/main/resources/org/example/foodig_v2/image/dairy-products.png";
+            case "調味料" -> this.imagePath = "src/main/resources/org/example/foodig_v2/image/spices.png";
+            default -> this.imagePath = "src/main/resources/org/example/foodig_v2/food-service.png";
+        }
         reloadExpiredAndExpiring();
     }
 
@@ -73,6 +86,15 @@ public class Food {
     // Method to change the type of food
     public void setType(String newType) {
         this.type = newType;
+        switch (newType) {
+            case "全穀雜糧" -> this.imagePath = "src/main/resources/org/example/foodig_v2/image/rice.png";
+            case "豆魚蛋肉" -> this.imagePath = "src/main/resources/org/example/foodig_v2/image/protein.png";
+            case "蔬菜" -> this.imagePath = "src/main/resources/org/example/foodig_v2/image/vegetable.png";
+            case "水果" -> this.imagePath = "src/main/resources/org/example/foodig_v2/image/fruits.png";
+            case "乳品" -> this.imagePath = "src/main/resources/org/example/foodig_v2/image/dairy-products.png";
+            case "調味料" -> this.imagePath = "src/main/resources/org/example/foodig_v2/image/spices.png";
+            default -> this.imagePath = "src/main/resources/org/example/foodig_v2/food-service.png";
+        }
     }
 
     // Method to change the name of food
@@ -82,6 +104,11 @@ public class Food {
 
     // Method to change the remark of food
     public void setRemark(String newRemark) { this.remark = newRemark; }
+
+    // Method to change the image of food
+    public void setImagePath(String newImagePath) {
+        this.imagePath = newImagePath;
+    }
 
     // Getter methods
     public LocalDate getManufacturedDate() {
@@ -110,15 +137,18 @@ public class Food {
 
     public String getRemark() { return remark; }
 
-    public static void main(String[] args) {
-        LocalDate expirationDate = LocalDate.of(2024, 05, 13);
-        LocalDate manufacturedDate = LocalDate.of(2024, 05, 10);
+    public String getImagePath() { return imagePath; }
 
-        Food Carrot = new Food("Carrot", "Fruit", expirationDate, manufacturedDate, "");
+    public static void main(String[] args) {
+        LocalDate expirationDate = LocalDate.of(2024, 5, 13);
+        LocalDate manufacturedDate = LocalDate.of(2024, 5, 10);
+
+        Food Carrot = new Food("Carrot", "水果", expirationDate, manufacturedDate, "");
 
         Carrot.setRemark("Yeh");
 
         System.out.println(Carrot.getRemark());
         System.out.println(Carrot.getExpirationDate());
+        System.out.println(Carrot.getImagePath());
     }
 }
