@@ -1,6 +1,5 @@
 package org.example.foodig_v2;
 
-import javafx.event.*;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -14,7 +13,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 
-public class FoodInfo implements Initializable {
+public class FoodInfoController implements Initializable {
     @FXML
     private ChoiceBox<String> ChoiceBox_FoodType;
     private final String[] foodType = {"全穀雜糧", "豆魚蛋肉", "蔬菜", "水果", "乳品", "堅果油脂", "調味料"};
