@@ -16,12 +16,12 @@
    <children>
       <VBox prefHeight="580.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="48.0">
          <children>
-            <ScrollPane fx:id="scroll" layoutY="47.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="534.0" prefWidth="300.0">
+            <ScrollPane fx:id="scroll" layoutY="47.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="532.0" prefWidth="300.0">
                <VBox.margin>
                   <Insets />
                </VBox.margin>
                <content>
-                  <GridPane fx:id="grid" layoutY="47.0" prefHeight="35.0" prefWidth="25.0">
+                  <GridPane fx:id="grid" layoutY="47.0" prefHeight="25.0" prefWidth="0.0">
                     <rowConstraints>
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
@@ -30,9 +30,9 @@
             </ScrollPane>
          </children>
       </VBox>
-      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="300.0" AnchorPane.bottomAnchor="532.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="300.0" AnchorPane.bottomAnchor="532.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <ImageView fx:id="back" fitHeight="24.0" fitWidth="23.0" layoutX="9.0" layoutY="12.0" onMousePressed="#BacktoMenu" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="268.0" AnchorPane.topAnchor="12.0">
+            <ImageView fx:id="back" fitHeight="24.0" fitWidth="23.0" layoutX="9.0" layoutY="12.0" onMousePressed="#BacktoMenu" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="268.0" AnchorPane.topAnchor="10.0">
                <image>
                   <Image url="@image/back-arrow.png" />
                </image>
