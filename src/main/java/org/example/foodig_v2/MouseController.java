@@ -47,6 +47,9 @@ public class MouseController implements Initializable {
     Label Feed_Label;
 
     @FXML
+    private Label Collect_Label;
+
+    @FXML
     Button Feedbtn;
 
     @FXML
@@ -75,8 +78,6 @@ public class MouseController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         Mouse PetMouse = MouseFarm.PetMouse;
         scenecontroller = new SceneController();
-        Coin_Label.setText(String.valueOf(MouseFarm.Coin));
-        Feed_Label.setText(String.valueOf(MouseFarm.Feed));
         SatietyTimer();
 
         satietyArray.add(satiety1);
@@ -84,11 +85,13 @@ public class MouseController implements Initializable {
         satietyArray.add(satiety3);
         satietyArray.add(satiety4);
         satietyArray.add(satiety5);
-
+        //reload the parameter
         AnimationTimer timer = new AnimationTimer() {
             @Override
             public void handle(long l) {
                 Feed_Label.setText(String.valueOf(MouseFarm.Feed));
+                Coin_Label.setText(String.valueOf(MouseFarm.Coin));
+                Collect_Label.setText(String.valueOf(mousecoin));
                 Feedbtn.setDisable(Feed <= 0);
                 Collectbtn.setDisable(PetMouse.ispoison());
                 int setcounter = (int) ((PetMouse.getSatiety()-1.0)*10);

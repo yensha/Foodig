@@ -43,6 +43,7 @@ public class MouseFarm {
 
     static public void AquireCoin(){
         Coin += mousecoin;
+        mousecoin = 0;
     }
 
     public static void addFeed() {
