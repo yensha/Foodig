@@ -6,13 +6,15 @@ public class Mouse {
     private double satiety;
     private boolean isPoison;
     private String imagePath;
+    private int price;
 
-    public Mouse(String name, int coinGenerateSpeed, double satiety, boolean isPoison, String imagePath) {
+    public Mouse(String name, int coinGenerateSpeed, double satiety, boolean isPoison, String imagePath, int price) {
         this.name = name;
         this.coinGenerateSpeed = coinGenerateSpeed;
         this.satiety = satiety;
         this.isPoison = isPoison;
         this.imagePath = imagePath;
+        this.price = price;
     }
 
     public String getName() { return name; }
@@ -40,6 +42,7 @@ public class Mouse {
     public void setSatiety(double satiety) {
         this.satiety = satiety;
     }
+    public int getPrice(){ return price;}
 
     public void subSatiety(double satiety) {
         double tempSatiety = getSatiety() - satiety;
