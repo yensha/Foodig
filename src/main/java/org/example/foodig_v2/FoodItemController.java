@@ -21,11 +21,11 @@ public class FoodItemController implements Initializable {
 
     private Food food;
 
-    void setfoodData(Food foods){
-        this.food = foods;
-        Label_Foodname.setText(foods.getName());
-        Label_Expdate.setText(foods.getExpirationDate().toString());
-        Image image = new Image(getClass().getResourceAsStream(foods.getImagePath()));
+    void setfoodData(Food food){
+        this.food = food;
+        Label_Foodname.setText(food.getName());
+        Label_Expdate.setText(food.getExpirationDate().toString());
+        Image image = new Image(String.valueOf(getClass().getResource(food.getImagePath())));
         Imgview_Foodimg.setImage(image);
 
     }

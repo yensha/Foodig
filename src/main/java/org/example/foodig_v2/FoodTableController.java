@@ -44,7 +44,7 @@ public class FoodTableController implements Initializable {
                 FoodItemController itemController = fxmlLoader.getController();
                 itemController.setfoodData(foods.get(i));
                 grid.add(pane, column, row++);
-                GridPane.setMargin(pane,new Insets(10,0,0,0));
+                GridPane.setMargin(pane,new Insets(10,10,10,10));
             }
 
         } catch (IOException e) {
