@@ -21,13 +21,13 @@ public class ShopController implements Initializable {
     @FXML
     private Label YourMoney;
     @FXML
-    private Button BuyFlatMouse;
+    private Button BuyFlatMouse_btn;
     @FXML
-    private Button BuyComputerMouse;
+    private Button BuyComputerMouse_btn;
     @FXML
-    private Button BuyRichBurgerMouse;
+    private Button BuyRichBurgerMouse_btn;
     @FXML
-    private Button Potion;
+    private Button BuyPotion_btn;
 
     private SceneController scenecontroller;
 

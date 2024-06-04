@@ -13,8 +13,10 @@ public class Mouse {
         this.isPoison = isPoison;
     }
 
-    public String getName() {
-        return name;
+    public String getName() { return name; }
+
+    public String getImagePath() {
+        return null;
     }
 
     public int getCoinGenerateSpeed() {

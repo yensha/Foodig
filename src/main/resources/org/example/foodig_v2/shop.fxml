@@ -114,7 +114,7 @@
                                     <Font size="14.0" />
                                  </font>
                               </Label>
-                              <Button fx:id="BuyFlatMouse_btn" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" style="-fx-background-radius: 20;" stylesheets="@GetCoin_btn.css" text="購買" textAlignment="CENTER" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                              <Button fx:id="BuyFlatMouse_btn" onMouseClicked="#BuyFlatMouse" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" style="-fx-background-radius: 20;" stylesheets="@GetCoin_btn.css" text="購買" textAlignment="CENTER" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                  <opaqueInsets>
                                     <Insets bottom="10.0" left="10.0" right="10.0" />
                                  </opaqueInsets>
@@ -122,7 +122,7 @@
                                     <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
                                  </padding>
                               </Button>
-                              <Button fx:id="BuyComputerMouse_btn" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" style="-fx-background-radius: 20;" stylesheets="@GetCoin_btn.css" text="購買" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                              <Button fx:id="BuyComputerMouse_btn" onMouseClicked="#BuyComputerMouse" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" style="-fx-background-radius: 20;" stylesheets="@GetCoin_btn.css" text="購買" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                  <opaqueInsets>
                                     <Insets bottom="10.0" left="10.0" right="10.0" />
                                  </opaqueInsets>
@@ -245,7 +245,7 @@
                                     </Label>
                                  </children>
                               </HBox>
-                              <Button fx:id="BuyRichBurgerMouse_btn" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" style="-fx-background-radius: 20;" stylesheets="@GetCoin_btn.css" text="購買" textAlignment="CENTER" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                              <Button fx:id="BuyRichBurgerMouse_btn" onMouseClicked="#BuyRichBurgerMouse" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" style="-fx-background-radius: 20;" stylesheets="@GetCoin_btn.css" text="購買" textAlignment="CENTER" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
                                  <opaqueInsets>
                                     <Insets bottom="10.0" left="10.0" right="10.0" />
                                  </opaqueInsets>
@@ -253,7 +253,7 @@
                                     <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
                                  </padding>
                               </Button>
-                              <Button fx:id="BuyPotion_btn" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" style="-fx-background-radius: 20;" stylesheets="@GetCoin_btn.css" text="購買" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                              <Button fx:id="BuyPotion_btn" onMouseClicked="#BuyPotion" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" style="-fx-background-radius: 20;" stylesheets="@GetCoin_btn.css" text="購買" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
                                  <opaqueInsets>
                                     <Insets bottom="10.0" left="10.0" right="10.0" />
                                  </opaqueInsets>
