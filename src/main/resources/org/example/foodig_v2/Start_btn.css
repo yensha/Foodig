@@ -13,3 +13,11 @@
     -fx-background-color : #3f3e87;
     -fx-background-radius :  20 20 20 20;
 }
+.shadow
+{
+    -fx-effect: dropShadow(three-pass-box, rgba(0,0,0,0.1), 10.0, 0.0, 0.0, 10.0);
+}
+.food-card
+{
+    -fx-background-radius: 10 10 10 10;
+}
