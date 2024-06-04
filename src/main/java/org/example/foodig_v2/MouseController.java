@@ -48,7 +48,7 @@ public class MouseController implements Initializable {
     Button Collectbtn;
 
     private SceneController scenecontroller;
-    
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -60,15 +60,19 @@ public class MouseController implements Initializable {
         AnimationTimer timer = new AnimationTimer() {
             @Override
             public void handle(long l) {
-                Collectbtn.setDisable(!PetMouse.ispoison());
+                Collectbtn.setDisable(PetMouse.ispoison());
             }
         };
         timer.start();
+
+        MouseFarm.startCoinGeneration();
 
         Image image = new Image(String.valueOf(getClass().getResource(PetMouse.getImagePath())));
         MouseImage.setImage(image);
         System.out.println(PetMouse.getImagePath());
         System.out.println(PetMouse.getName());
+        System.out.println(MouseFarm.Coin);
+        System.out.println(MouseFarm.mousecoin);
 
     }
 
