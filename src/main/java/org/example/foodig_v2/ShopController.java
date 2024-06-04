@@ -52,6 +52,6 @@ public class ShopController implements Initializable {
         MouseFarm.updateMousetoRichBurgerMouse();
     }
     public void BuyPotion(MouseEvent event) throws IOException {
-        Mouse.isPoison = false;
+        MouseFarm.PetMouse.setPoison(false);
     }
 }
