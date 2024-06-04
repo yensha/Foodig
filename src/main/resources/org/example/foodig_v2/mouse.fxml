@@ -94,7 +94,7 @@
                               <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                            </VBox.margin>
                         </ImageView>
-                        <Label text="勞贖" textFill="#3f3e87">
+                        <Label fx:id="Mouse_Name" text="勞贖" textFill="#3f3e87">
                            <padding>
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                            </padding>
