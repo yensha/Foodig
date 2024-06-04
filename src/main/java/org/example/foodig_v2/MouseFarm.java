@@ -57,6 +57,7 @@ public class MouseFarm {
 
     public static void feedFood() {
         Feed -= 1;
+        System.out.println("Feed: " + Feed);
         PetMouse.addSatiety(0.1);
         SatietyTimer();
         System.out.println(PetMouse.getSatiety());
