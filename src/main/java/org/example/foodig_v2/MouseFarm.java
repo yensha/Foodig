@@ -19,14 +19,17 @@ public class MouseFarm {
 
     public static void updateMousetoFlatMouse() {
         PetMouse = new FlatMouse();
+        Coin -= PetMouse.getPrice();
     }
 
     public static void updateMousetoRichBurgerMouse() {
         PetMouse = new RichBurgerMouse();
+        Coin -= PetMouse.getPrice();
     }
 
     public static void updateMousetoComputerMouse() {
         PetMouse = new ComputerMouse();
+        Coin -= PetMouse.getPrice();
     }
 
     public static void startCoinGeneration() {
