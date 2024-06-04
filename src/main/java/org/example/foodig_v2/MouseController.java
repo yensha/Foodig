@@ -38,6 +38,9 @@ public class MouseController implements Initializable {
     ImageView back;
 
     @FXML
+    private Label Mouse_Name;
+
+    @FXML
     Label Coin_Label;
 
     @FXML
@@ -69,7 +72,7 @@ public class MouseController implements Initializable {
         timer.start();
 
         MouseFarm.startCoinGeneration();
-
+        Mouse_Name.setText(PetMouse.getName());
         Image image = new Image(String.valueOf(getClass().getResource(PetMouse.getImagePath())));
         MouseImage.setImage(image);
         System.out.println(PetMouse.getImagePath());
