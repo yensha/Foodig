@@ -4,7 +4,7 @@ public class Mouse {
     protected String name;
     protected int coinGenerateSpeed;
     protected double satiety;
-    protected boolean isPoison;
+    public static boolean isPoison;
 
     public Mouse(String name, int coinGenerateSpeed, double satiety, boolean isPoison) {
         this.name = name;
@@ -13,8 +13,10 @@ public class Mouse {
         this.isPoison = isPoison;
     }
 
-    public String getName() {
-        return name;
+    public String getName() { return name; }
+
+    public String getImagePath() {
+        return null;
     }
 
     public int getCoinGenerateSpeed() {
@@ -25,7 +27,7 @@ public class Mouse {
         return satiety;
     }
 
-    public boolean isPoison() {
+    public static boolean isPoison() {
         return isPoison;
     }
 }
