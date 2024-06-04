@@ -9,10 +9,10 @@ import static org.example.foodig_v2.MouseFarm.feedFood;
 // static!!!!!!!!!!
 
 public class FoodStorage {
-    private static ArrayList<Food> foods = new ArrayList<>();;
-    private static ArrayList<Food> expiredFoods = new ArrayList<>();;
-    private static ArrayList<Food> expiringFoods = new ArrayList<>();;
-    private static ArrayList<Food> otherFoods = new ArrayList<>();;
+    private static ArrayList<Food> foods = new ArrayList<>();
+    private static ArrayList<Food> expiredFoods = new ArrayList<>();
+    private static ArrayList<Food> expiringFoods = new ArrayList<>();
+    private static ArrayList<Food> otherFoods = new ArrayList<>();
 
     // Method to add food
     public static void addFood(String name, String type, LocalDate expirationDate, LocalDate manufacturedDate, String remark) {

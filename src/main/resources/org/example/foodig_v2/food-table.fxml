@@ -2,6 +2,9 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.ColorInput?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -11,23 +14,14 @@
 
 <AnchorPane prefHeight="580.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.foodig_v2.FoodTableController">
    <children>
-      <VBox prefHeight="580.0" prefWidth="300.0">
+      <VBox prefHeight="580.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="48.0">
          <children>
-            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="47.0" prefWidth="300.0">
-               <children>
-                  <ImageView fx:id="back" fitHeight="24.0" fitWidth="23.0" layoutX="9.0" layoutY="12.0" onMousePressed="#BacktoMenu" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@image/back-arrow.png" />
-                     </image>
-                  </ImageView>
-               </children>
-            </AnchorPane>
-            <ScrollPane fx:id="scroll" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="533.0" prefWidth="300.0" VBox.vgrow="ALWAYS">
+            <ScrollPane fx:id="scroll" layoutY="47.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="534.0" prefWidth="300.0">
                <VBox.margin>
-                  <Insets top="5.0" />
+                  <Insets />
                </VBox.margin>
                <content>
-                  <GridPane fx:id="grid">
+                  <GridPane fx:id="grid" layoutY="47.0" prefHeight="35.0" prefWidth="25.0">
                     <rowConstraints>
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
@@ -36,5 +30,25 @@
             </ScrollPane>
          </children>
       </VBox>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="300.0" AnchorPane.bottomAnchor="532.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="back" fitHeight="24.0" fitWidth="23.0" layoutX="9.0" layoutY="12.0" onMousePressed="#BacktoMenu" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="268.0" AnchorPane.topAnchor="12.0">
+               <image>
+                  <Image url="@image/back-arrow.png" />
+               </image>
+               <effect>
+                  <ColorAdjust>
+                     <input>
+                        <Blend mode="SRC_ATOP">
+                           <topInput>
+                              <ColorInput height="135.51" paint="#3f3e87" width="83.06" />
+                           </topInput>
+                        </Blend>
+                     </input>
+                  </ColorAdjust>
+               </effect>
+            </ImageView>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
