@@ -1,10 +1,9 @@
-package org.example.foodig_v2;
+package org.example.foodig_v2.Controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
-import javafx.fxml.Initializable;
 
 import java.net.URL;
 import java.util.ResourceBundle;
