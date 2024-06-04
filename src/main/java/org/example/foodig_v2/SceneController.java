@@ -1,6 +1,7 @@
-package org.example.foodig_v2.Controller;
+package org.example.foodig_v2;
 
 import javafx.event.*;
+import javafx.fxml.FXML;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -23,6 +24,15 @@ public class SceneController {
         stage.setScene(scene);
         stage.show();
     }
+    public void switchToMenu(MouseEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("menu.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
     public void switchToMenu(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("menu.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -30,13 +40,14 @@ public class SceneController {
         stage.setScene(scene);
         stage.show();
     }
+    /*
     public void switchToFood(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("food-info.fxml"));
+        root = FXMLLoader.load(getClass().getResource("Controller/food-info.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-    }
+    }*/
     public void switchToFood(MouseEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("food-table.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -51,13 +62,6 @@ public class SceneController {
         stage.setScene(scene);
         stage.show();
     }
-    public void switchToMenu(MouseEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("menu.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
 
     public void switchToMouse(MouseEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("mouse.fxml"));
@@ -67,7 +71,7 @@ public class SceneController {
         stage.show();
     }
     public void switchToSetting(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("menu.fxml"));
+        root = FXMLLoader.load(getClass().getResource("Start.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

@@ -1,4 +1,4 @@
-package org.example.foodig_v2.Controller;
+package org.example.foodig_v2;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -30,6 +30,7 @@ public class ShopController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         scenecontroller = new SceneController();
     }
+
     public void BacktoMenu(MouseEvent event) throws IOException {
         scenecontroller.switchToMenu(event);
     }

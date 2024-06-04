@@ -1,4 +1,4 @@
-package org.example.foodig_v2.Controller;
+package org.example.foodig_v2;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -7,7 +7,6 @@ import javafx.scene.image.ImageView;
 
 import javafx.scene.input.MouseEvent;
 import org.example.foodig_v2.Mouse.Mouse;
-import org.example.foodig_v2.MouseFarm;
 
 import java.net.URL;
 import java.util.ResourceBundle;
