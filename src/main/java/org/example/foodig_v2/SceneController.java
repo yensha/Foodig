@@ -1,4 +1,4 @@
-package org.example.foodig_v2.Controller;
+package org.example.foodig_v2;
 
 import javafx.event.*;
 import javafx.scene.input.MouseEvent;
