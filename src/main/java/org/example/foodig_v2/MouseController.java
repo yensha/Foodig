@@ -1,4 +1,4 @@
-package org.example.foodig_v2;
+package org.example.foodig_v2.Controller;
 
 import javafx.animation.AnimationTimer;
 import javafx.beans.property.BooleanProperty;
@@ -6,10 +6,12 @@ import javafx.beans.property.SimpleBooleanProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 import javafx.scene.input.MouseEvent;
 import org.example.foodig_v2.Mouse.Mouse;
+import org.example.foodig_v2.MouseFarm;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -26,6 +28,9 @@ public class MouseController implements Initializable {
 
     @FXML
     ImageView Image_Shop;
+
+    @FXML
+    ImageView MouseImage;
 
     @FXML
     ImageView back;
@@ -60,6 +65,12 @@ public class MouseController implements Initializable {
             }
         };
         timer.start();
+
+        String imagePath = PetMouse.getImagePath();
+        if (imagePath != null) {
+            Image image = new Image(imagePath);
+            MouseImage.setImage(image);
+        }
     }
 //    public void Isposion(){
 //        if(PetMouse.isposion){

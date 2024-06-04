@@ -14,19 +14,19 @@ public class MouseFarm {
     static double mousecoin = 0.0;
     static public Mouse PetMouse = new RegularMouse();
 
-    public void updateMousetoFlatMouse() {
+    public static void updateMousetoFlatMouse() {
         PetMouse = new FlatMouse();
     }
 
-    public void updateMousetoRichBurgerMouse() {
+    public static void updateMousetoRichBurgerMouse() {
         PetMouse = new RichBurgerMouse();
     }
 
-    public void updateMousetoComputerMouse() {
+    public static void updateMousetoComputerMouse() {
         PetMouse = new ComputerMouse();
     }
 
-    public void GenerateCoin(){
+    public static void GenerateCoin(){
         if (!PetMouse.isPoison()) {
             mousecoin += (int)(PetMouse.getCoinGenerateSpeed() * PetMouse.getSatiety());
         }
