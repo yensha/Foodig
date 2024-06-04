@@ -12,8 +12,8 @@ public class FoodStorage {
     private static ArrayList<Food> otherFoods = new ArrayList<>();;
 
     // Method to add food
-    public static void addFood(String name, String type, LocalDate expirationDate, LocalDate manufacturedDate) {
-        Food newFood = new Food(name, type, expirationDate, manufacturedDate);
+    public static void addFood(String name, String type, LocalDate expirationDate, LocalDate manufacturedDate, String remark) {
+        Food newFood = new Food(name, type, expirationDate, manufacturedDate, remark);
         foods.add(newFood);
         reload(); // Reload expired and expiring foods after adding new food
     }
@@ -118,9 +118,9 @@ public class FoodStorage {
         LocalDate expirationDate2 = LocalDate.of(2024, 5, 13);
         LocalDate manufacturedDate = LocalDate.of(2024, 5, 10);
         // Add some foods
-        addFood("Apple", "Fruit", expirationDate0, manufacturedDate);
-        addFood("Banana", "Fruit", expirationDate1, manufacturedDate);
-        addFood("Cheese", "Dairy", expirationDate2, manufacturedDate);
+        addFood("Apple", "Fruit", expirationDate0, manufacturedDate, "");
+        addFood("Banana", "Fruit", expirationDate1, manufacturedDate, "");
+        addFood("Cheese", "Dairy", expirationDate2, manufacturedDate, "");
 
         // Display foods
         System.out.println("All Foods: " + getFoodsName());
