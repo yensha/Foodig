@@ -3,6 +3,7 @@ package org.example.foodig_v2;
 import javafx.animation.AnimationTimer;
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.SimpleBooleanProperty;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -23,6 +24,7 @@ import java.util.concurrent.TimeUnit;
 
 import static java.util.concurrent.Executors.newSingleThreadScheduledExecutor;
 import static org.example.foodig_v2.MouseFarm.PetMouse;
+import static org.example.foodig_v2.MouseFarm.feedFood;
 
 public class MouseController implements Initializable {
 
@@ -48,6 +50,7 @@ public class MouseController implements Initializable {
     Button Collectbtn;
 
     private SceneController scenecontroller;
+
 
 
     @Override
@@ -85,5 +88,7 @@ public class MouseController implements Initializable {
     public void BacktoMenu(MouseEvent event) throws IOException {
         scenecontroller.switchToMenu(event);
     }
-
+    public void Feed(ActionEvent event) throws IOException {
+        feedFood();
+    }
 }

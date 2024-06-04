@@ -56,8 +56,9 @@ public class MouseFarm {
     }
 
     public static void feedFood() {
+        Feed -= 1;
         PetMouse.addSatiety(0.1);
-
+        SatietyTimer();
         System.out.println(PetMouse.getSatiety());
     }
 
@@ -71,6 +72,18 @@ public class MouseFarm {
         long durationInMillis = TimeUnit.SECONDS.toMillis(duration);
         ScheduledExecutorService executor = newSingleThreadScheduledExecutor();
         executor.schedule(() -> PetMouse.setPoison(false), durationInMillis, TimeUnit.MILLISECONDS);
+        executor.shutdown(); // Gracefully shutdown the executor after scheduling
+    }
+
+    public static void SatietyTimer() {
+
+//        long duration = 8; // Set duration in hours
+//        long durationInMillis = TimeUnit.HOURS.toMillis(duration);
+
+        long duration = 15; // Set duration in seconds
+        long durationInMillis = TimeUnit.SECONDS.toMillis(duration);
+        ScheduledExecutorService executor = newSingleThreadScheduledExecutor();
+        executor.schedule(() -> PetMouse.subSatiety(0.1), durationInMillis, TimeUnit.MILLISECONDS);
         executor.shutdown(); // Gracefully shutdown the executor after scheduling
     }
 }

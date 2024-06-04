@@ -41,6 +41,12 @@ public class Mouse {
         this.satiety = satiety;
     }
 
+    public void subSatiety(double satiety) {
+        double tempSatiety = getSatiety() - satiety;
+        this.satiety = Math.max(tempSatiety, 1.0);
+        System.out.println(getSatiety());
+    }
+
     public void addSatiety(double satiety) {
         if (this.getSatiety() < 1.5) {
             this.satiety += satiety;
