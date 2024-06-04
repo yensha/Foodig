@@ -1,5 +1,6 @@
 package org.example.foodig_v2;
 
+import javafx.animation.AnimationTimer;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -12,6 +13,9 @@ import org.example.foodig_v2.MouseFarm;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import static org.example.foodig_v2.MouseFarm.Coin;
+import static org.example.foodig_v2.MouseFarm.Feed;
 
 public class ShopController implements Initializable {
     @FXML
@@ -44,14 +48,19 @@ public class ShopController implements Initializable {
     }
     public void BuyFlatMouse(MouseEvent event) throws IOException {
         MouseFarm.updateMousetoFlatMouse();
+        YourMoney.setText(String.valueOf(Coin));
     }
     public void BuyComputerMouse(MouseEvent event) throws IOException {
         MouseFarm.updateMousetoComputerMouse();
+        YourMoney.setText(String.valueOf(Coin));
     }
     public void BuyRichBurgerMouse(MouseEvent event) throws IOException {
         MouseFarm.updateMousetoRichBurgerMouse();
+        YourMoney.setText(String.valueOf(Coin));
     }
     public void BuyPotion(MouseEvent event) throws IOException {
         MouseFarm.PetMouse.setPoison(false);
+        Coin -= 1000;
+        YourMoney.setText(String.valueOf(Coin));
     }
 }
