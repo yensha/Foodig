@@ -63,7 +63,7 @@ public class MouseController implements Initializable {
         AnimationTimer timer = new AnimationTimer() {
             @Override
             public void handle(long l) {
-                Collectbtn.setDisable(!PetMouse.ispoison());
+                Collectbtn.setDisable(PetMouse.ispoison());
             }
         };
         timer.start();

@@ -44,7 +44,7 @@ public class MouseFarm {
     }
 
     public static void feedExpiredFood() {
-        PetMouse.setPoison(false);
+        PetMouse.setPoison(true);
         poisonTimer();
         System.out.println(PetMouse.ispoison());
     }
@@ -65,7 +65,7 @@ public class MouseFarm {
         long duration = 15; // Set duration in seconds
         long durationInMillis = TimeUnit.SECONDS.toMillis(duration);
         ScheduledExecutorService executor = newSingleThreadScheduledExecutor();
-        executor.schedule(() -> PetMouse.setPoison(true), durationInMillis, TimeUnit.MILLISECONDS);
+        executor.schedule(() -> PetMouse.setPoison(false), durationInMillis, TimeUnit.MILLISECONDS);
         executor.shutdown(); // Gracefully shutdown the executor after scheduling
     }
 
