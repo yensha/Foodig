@@ -16,6 +16,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 
 
+import javax.swing.*;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -82,6 +83,7 @@ public class sidebarController implements Initializable {
             side_pane.setVisible(false);
         });
         Mouse_Name.setText(MouseFarm.PetMouse.getName());
+        Mouse_Name.setStyle("-fx-font-size: 18;"+" -fx-alignment: center;");
         Image image = new Image(String.valueOf(getClass().getResource(MouseFarm.PetMouse.getImagePath())));
         MouseImage.setImage(image);
         expiredFoods.addAll(FoodStorage.getExpiredFoods());

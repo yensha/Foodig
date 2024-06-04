@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 import static java.util.concurrent.Executors.newSingleThreadScheduledExecutor;
 
 public class MouseFarm {
-    static public double Coin = 0; // Total Coin
+    static public double Coin = 2000; // Total Coin
     static public int Feed = 0; // Mouse Food
     static double mousecoin = 0.0;
     static public Mouse PetMouse = new RegularMouse();

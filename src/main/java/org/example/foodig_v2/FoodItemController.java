@@ -31,6 +31,9 @@ public class FoodItemController implements Initializable {
     @FXML
     private AnchorPane food_card;
 
+    @FXML
+    private ImageView ImageView_delete;
+
     private Food food;
 
     void setfoodexpiredFoodsData(Food food){

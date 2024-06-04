@@ -6,6 +6,7 @@ module org.example.foodig_v2 {
     requires com.dlsc.formsfx;
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
+    requires java.desktop;
 
     opens org.example.foodig_v2 to javafx.fxml;
     exports org.example.foodig_v2;
