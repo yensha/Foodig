@@ -12,7 +12,7 @@ public class Mouse {
         this.coinGenerateSpeed = coinGenerateSpeed;
         this.satiety = satiety;
         this.isPoison = isPoison;
-        this.imagePath = "";
+        this.imagePath = imagePath;
     }
 
     public String getName() { return name; }

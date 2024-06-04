@@ -86,7 +86,7 @@
                               </Label>
                            </children>
                         </HBox>
-                        <ImageView fitHeight="154.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="MouseImage" fitHeight="154.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@image/mouse1.png" />
                            </image>

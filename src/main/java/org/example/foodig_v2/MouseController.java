@@ -48,8 +48,7 @@ public class MouseController implements Initializable {
     Button Collectbtn;
 
     private SceneController scenecontroller;
-
-    private BooleanProperty poison = new SimpleBooleanProperty(false);
+    
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -61,22 +60,18 @@ public class MouseController implements Initializable {
         AnimationTimer timer = new AnimationTimer() {
             @Override
             public void handle(long l) {
-                Collectbtn.setDisable(!PetMouse.isPoison());
+                Collectbtn.setDisable(!PetMouse.ispoison());
             }
         };
         timer.start();
 
-        String imagePath = PetMouse.getImagePath();
-        if (imagePath != null) {
-            Image image = new Image(imagePath);
-            MouseImage.setImage(image);
-        }
+        Image image = new Image(String.valueOf(getClass().getResource(PetMouse.getImagePath())));
+        MouseImage.setImage(image);
+        System.out.println(PetMouse.getImagePath());
+        System.out.println(PetMouse.getName());
+
     }
-//    public void Isposion(){
-//        if(PetMouse.isposion){
-//
-//        }
-//    }
+
     public void TurntoShop(MouseEvent event) throws IOException {
         scenecontroller.switchToShop(event);
     }

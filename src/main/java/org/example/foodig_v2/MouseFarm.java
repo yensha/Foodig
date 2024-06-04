@@ -27,7 +27,7 @@ public class MouseFarm {
     }
 
     public static void GenerateCoin(){
-        if (!PetMouse.isPoison()) {
+        if (!PetMouse.ispoison()) {
             mousecoin += (int)(PetMouse.getCoinGenerateSpeed() * PetMouse.getSatiety());
         }
     }
@@ -46,7 +46,7 @@ public class MouseFarm {
     public static void feedExpiredFood() {
         PetMouse.setPoison(false);
         poisonTimer();
-        System.out.println(PetMouse.isPoison());
+        System.out.println(PetMouse.ispoison());
     }
 
     public static void feedFood() {
@@ -56,7 +56,7 @@ public class MouseFarm {
     }
 
     public static void poisonTimer() {
-        System.out.println(PetMouse.isPoison());
+        System.out.println(PetMouse.ispoison());
 
 //        long duration = 8; // Set duration in hours
 //        long durationInMillis = TimeUnit.HOURS.toMillis(duration);
