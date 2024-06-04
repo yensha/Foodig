@@ -3,6 +3,9 @@ package org.example.foodig_v2;
 import java.util.ArrayList;
 import java.time.LocalDate;
 
+import static org.example.foodig_v2.MouseFarm.feedExpiredFood;
+import static org.example.foodig_v2.MouseFarm.feedFood;
+
 // static!!!!!!!!!!
 
 public class FoodStorage {
@@ -20,6 +23,14 @@ public class FoodStorage {
 
     // Method to delete food by name
     public static void deleteFood(String name) {
+        if (foods.stream().filter(obj -> obj.getName().equals(name))
+                .findFirst()
+                .orElse(null)  // Object not found
+                .isExpired()) {
+            feedExpiredFood();
+        } else {
+            feedFood();
+        }
         foods.removeIf(food -> food.getName().equals(name));
         reload(); // Reload expired and expiring foods after deleting food
     }

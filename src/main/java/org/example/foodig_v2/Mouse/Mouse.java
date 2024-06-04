@@ -28,4 +28,13 @@ public class Mouse {
     public boolean isPoison() {
         return isPoison;
     }
+
+    public void setPoison(boolean poison) {
+        isPoison = poison;
+    }
+
+    public void addSatiety(double satiety) {
+        this.satiety += satiety;
+    }
+
 }

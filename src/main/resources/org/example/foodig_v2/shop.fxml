@@ -27,10 +27,21 @@
                      <image>
                         <Image url="@image/back-arrow.png" />
                      </image>
+                     <effect>
+                        <ColorAdjust>
+                           <input>
+                              <Blend mode="SRC_ATOP">
+                                 <topInput>
+                                    <ColorInput height="74.86" paint="#3f3e87" width="72.52" />
+                                 </topInput>
+                              </Blend>
+                           </input>
+                        </ColorAdjust>
+                     </effect>
                   </ImageView>
-                  <ImageView fx:id="Image_Shop" fitHeight="31.0" fitWidth="31.0" layoutX="255.0" layoutY="8.0" onMousePressed="#TurntoShop" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="Image_Shop" fitHeight="31.0" fitWidth="31.0" layoutX="255.0" layoutY="8.0" onMousePressed="#TurntoMouse" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@image/shopping_cart.png" />
+                        <Image url="@image/mouse.png" />
                      </image>
                      <effect>
                         <ColorAdjust>

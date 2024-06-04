@@ -33,8 +33,8 @@ public class ShopController implements Initializable {
     public void BacktoMenu(MouseEvent event) throws IOException {
         scenecontroller.switchToMenu(event);
     }
-    public void TurntoShop(MouseEvent event) throws IOException {
-        scenecontroller.switchToShop(event);
+    public void TurntoMouse(MouseEvent event) throws IOException {
+        scenecontroller.switchToMouse(event);
     }
 
 }
