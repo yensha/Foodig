@@ -12,14 +12,14 @@ public class Food {
     private String remark;
 
     // Constructor
-    public Food(String name, String type, LocalDate expirationDate, LocalDate manufacturedDate) {
+    public Food(String name, String type, LocalDate expirationDate, LocalDate manufacturedDate, String remark) {
         this.name = name;
         this.type = type;
         this.expirationDate = expirationDate;
         this.manufacturedDate = manufacturedDate;
         this.expiring = false;
         this.expired = false;
-        this.remark = "";
+        this.remark = remark;
         reloadExpiredAndExpiring();
     }
 
@@ -114,7 +114,7 @@ public class Food {
         LocalDate expirationDate = LocalDate.of(2024, 05, 13);
         LocalDate manufacturedDate = LocalDate.of(2024, 05, 10);
 
-        Food Carrot = new Food("Carrot", "Fruit", expirationDate, manufacturedDate);
+        Food Carrot = new Food("Carrot", "Fruit", expirationDate, manufacturedDate, "");
 
         Carrot.setRemark("Yeh");
 

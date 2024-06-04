@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
@@ -36,7 +37,7 @@
             </ImageView>
             <ImageView fx:id="Image_Mouse" fitHeight="31.0" fitWidth="31.0" layoutX="260.0" layoutY="10.0" onMousePressed="#GotoMenu" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@image/mouse.png" />
+                  <Image url="@image/trash.png" />
                </image>
                <effect>
                   <ColorAdjust>
@@ -52,7 +53,7 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <AnchorPane layoutY="47.0" prefHeight="280.0" prefWidth="300.0">
+      <AnchorPane layoutY="47.0" prefHeight="310.0" prefWidth="300.0">
          <children>
             <AnchorPane fx:id="Panel_FoodImage" prefHeight="120.0" prefWidth="120.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0">
                <children>
@@ -99,5 +100,6 @@
             <TextArea fx:id="TextArea_FoodRemark" layoutX="8.0" layoutY="253.0" prefHeight="46.4" prefWidth="280.0" promptText="輸入食物備註" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="225.0" />
          </children>
       </AnchorPane>
+      <Button fx:id="Button_SaveFoodInfo" layoutX="247.0" layoutY="328.0" mnemonicParsing="false" text="儲存" />
    </children>
 </AnchorPane>
