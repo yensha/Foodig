@@ -1,5 +1,7 @@
 package org.example.foodig_v2;
 
+import org.example.foodig_v2.Mouse.*;
+
 public class MouseFarm {
     static public double Coin = 0; // Total Coin
     static public int Feed = 0; // Mouse Food

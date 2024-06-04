@@ -1,4 +1,4 @@
-package org.example.foodig_v2;
+package org.example.foodig_v2.Mouse;
 
 public class RichBurgerMouse extends Mouse {
     public RichBurgerMouse() {
