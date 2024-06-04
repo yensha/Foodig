@@ -1,4 +1,4 @@
-package org.example.foodig_v2.Controller;
+package org.example.foodig_v2;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,8 +10,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 
 import javafx.scene.input.MouseEvent;
-import org.example.foodig_v2.Food;
-import org.example.foodig_v2.FoodStorage;
 
 
 import java.io.IOException;
