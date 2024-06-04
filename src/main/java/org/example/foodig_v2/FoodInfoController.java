@@ -14,8 +14,7 @@ import java.net.URL;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
 
-import static org.example.foodig_v2.FoodStorage.addFood;
-import static org.example.foodig_v2.FoodStorage.getFoodsName;
+import static org.example.foodig_v2.FoodStorage.*;
 
 
 public class FoodInfoController implements Initializable {
@@ -47,6 +46,16 @@ public class FoodInfoController implements Initializable {
         System.out.println(getFoodsName());
     }
     @FXML
+    private void trashFood(MouseEvent event) throws IOException {
+        deleteFood(TextField_FoodNameInput.getText()); // name should be the opened Food Info
+        System.out.println("All Foods after deleting: " + getFoodsName());
+        try {
+            scene_controller_food.switchToMenu(event);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    @FXML
     private DatePicker DatePicker_ExpiredDate;
     @FXML
     private DatePicker DatePicker_ManufactureDate;
@@ -64,7 +73,7 @@ public class FoodInfoController implements Initializable {
     @FXML
     private ImageView Image_BackArrow;
     @FXML
-    private ImageView Image_Mouse;
+    private ImageView Image_Trash;
 
     @FXML
     private SceneController scene_controller_food;

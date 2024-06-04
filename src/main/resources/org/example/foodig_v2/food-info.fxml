@@ -35,7 +35,7 @@
                   </ColorAdjust>
                </effect>
             </ImageView>
-            <ImageView fx:id="Image_Mouse" fitHeight="31.0" fitWidth="31.0" layoutX="260.0" layoutY="10.0" onMousePressed="#GotoMenu" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="Image_Trash" fitHeight="31.0" fitWidth="31.0" layoutX="260.0" layoutY="10.0" onMousePressed="#trashFood" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@image/trash.png" />
                </image>

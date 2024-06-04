@@ -17,6 +17,8 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
+import static org.example.foodig_v2.FoodStorage.reload;
+
 public class FoodTableController implements Initializable {
     @FXML
     private GridPane grid;
@@ -48,6 +50,8 @@ public class FoodTableController implements Initializable {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+
+        reload(); // reload all food
     }
 
     public void BacktoMenu(MouseEvent event) throws IOException {

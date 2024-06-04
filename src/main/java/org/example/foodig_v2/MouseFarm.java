@@ -28,4 +28,12 @@ public class MouseFarm {
     public void CheckPosioned(){
 
     }
+
+    public static void feedExpiredFood() {
+        PetMouse.setPoison(true);
+    }
+
+    public static void feedFood() {
+        PetMouse.addSatiety(0.1);
+    }
 }

@@ -3,6 +3,7 @@ package org.example.foodig_v2;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 import java.net.URL;
@@ -23,9 +24,9 @@ public class FoodItemController implements Initializable {
     void setfoodData(Food foods){
         this.food = foods;
         Label_Foodname.setText(foods.getName());
-        //Label_Expdate.setText(foods.getExpirationDate());
-        //Image image = new Image(getClass().getResourceAsStream(foods.getImgSrc));
-        //Imgview_Foodimg.setImage(image);
+        Label_Expdate.setText(foods.getExpirationDate().toString());
+        Image image = new Image(getClass().getResourceAsStream(foods.getImagePath()));
+        Imgview_Foodimg.setImage(image);
 
     }
     public void initialize(URL url, ResourceBundle resourceBundle) {

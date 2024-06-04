@@ -24,6 +24,17 @@
                      <image>
                         <Image url="@image/back-arrow.png" />
                      </image>
+                     <effect>
+                        <ColorAdjust>
+                           <input>
+                              <Blend mode="SRC_ATOP">
+                                 <topInput>
+                                    <ColorInput height="133.35" paint="#3f3e87" width="121.65" />
+                                 </topInput>
+                              </Blend>
+                           </input>
+                        </ColorAdjust>
+                     </effect>
                   </ImageView>
                   <ImageView fx:id="Image_Shop" fitHeight="31.0" fitWidth="31.0" layoutX="255.0" layoutY="8.0" onMousePressed="#TurntoShop" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -49,7 +60,7 @@
                      <children>
                         <HBox alignment="CENTER" prefHeight="40.0" prefWidth="300.0">
                            <children>
-                              <ImageView fx:id="Image_Mouse1" fitHeight="31.0" fitWidth="31.0"  pickOnBounds="true" preserveRatio="true">
+                              <ImageView fx:id="Image_Mouse1" fitHeight="31.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@image/coin.png" />
                                  </image>
@@ -83,7 +94,7 @@
                               <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                            </VBox.margin>
                         </ImageView>
-                        <Label text="勞贖">
+                        <Label text="勞贖" textFill="#3f3e87">
                            <padding>
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                            </padding>
