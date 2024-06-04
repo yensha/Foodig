@@ -6,6 +6,7 @@ import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.fxml.Initializable;
 import javafx.scene.input.MouseEvent;
+import org.example.foodig_v2.Mouse.Mouse;
 import org.example.foodig_v2.MouseFarm;
 
 import java.io.IOException;
@@ -49,5 +50,8 @@ public class ShopController implements Initializable {
     }
     public void BuyRichBurgerMouse(MouseEvent event) throws IOException {
         MouseFarm.updateMousetoRichBurgerMouse();
+    }
+    public void BuyPotion(MouseEvent event) throws IOException {
+        Mouse.isPoison = false;
     }
 }
