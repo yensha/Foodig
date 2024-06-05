@@ -12,17 +12,14 @@
 
 <AnchorPane fx:id="food_card" prefHeight="50.0" prefWidth="280.0" stylesheets="@Start_btn.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.foodig_v2.FoodItemController">
    <children>
-      <HBox prefHeight="50.0" prefWidth="280.0" spacing="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <HBox prefHeight="50.0" prefWidth="266.0" spacing="15.0">
          <children>
             <ImageView fx:id="Imgview_Foodimg" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@image/dairy-products.png" />
                </image>
-               <HBox.margin>
-                  <Insets top="5.0" />
-               </HBox.margin>
             </ImageView>
-            <VBox prefHeight="51.0" prefWidth="205.0">
+            <VBox prefHeight="40.0" prefWidth="230.0">
                <children>
                   <Label fx:id="Label_Foodname" text="豆漿">
                      <font>
@@ -36,21 +33,10 @@
                      </children>
                   </HBox>
                </children>
-               <HBox.margin>
-                  <Insets top="5.0" />
-               </HBox.margin>
             </VBox>
-            <ImageView fx:id="ImageView_delete" fitHeight="35.0" fitWidth="35.0" onMousePressed="#setParentController" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@image/trash.png" />
-               </image>
-               <HBox.margin>
-                  <Insets left="5.0" top="6.0" />
-               </HBox.margin>
-            </ImageView>
          </children>
          <padding>
-            <Insets bottom="5.0" left="10.0" right="10.0" />
+            <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
          </padding>
       </HBox>
    </children>
