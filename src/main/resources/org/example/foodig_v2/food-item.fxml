@@ -34,6 +34,14 @@
                   </HBox>
                </children>
             </VBox>
+            <ImageView fx:id="ImageView_delete" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/trash.png" />
+               </image>
+               <HBox.margin>
+                  <Insets top="2.0" />
+               </HBox.margin>
+            </ImageView>
          </children>
          <padding>
             <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
@@ -41,7 +49,7 @@
       </HBox>
    </children>
    <styleClass>
-      <String fx:value="food-card" />
       <String fx:value="shadow" />
+      <String fx:value="food-card" />
    </styleClass>
 </AnchorPane>
