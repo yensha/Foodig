@@ -72,7 +72,7 @@ public class FoodTableController implements Initializable {
 
     private void addCategoryLabel(String labelText, int column, int row) {
         Label label = new Label(labelText);
-        label.setFont(Font.font("System", FontWeight.BOLD, 18));
+        label.setFont(Font.font("Cambria", FontWeight.BOLD, 18));
         grid.add(label, column, row);
         GridPane.setMargin(label, new Insets(10, 10, 10, 10));
     }
