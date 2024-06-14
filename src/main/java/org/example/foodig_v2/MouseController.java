@@ -90,8 +90,8 @@ public class MouseController implements Initializable {
             @Override
             public void handle(long l) {
                 Feed_Label.setText(String.valueOf(MouseFarm.Feed));
-                Coin_Label.setText(String.valueOf(MouseFarm.Coin));
-                Collect_Label.setText(String.valueOf(mousecoin));
+                Coin_Label.setText(String.valueOf((int)MouseFarm.Coin));
+                Collect_Label.setText(String.valueOf((int)mousecoin));
                 Feedbtn.setDisable(Feed <= 0);
                 Collectbtn.setDisable(PetMouse.ispoison());
                 int setcounter = (int) ((PetMouse.getSatiety()-1.0)*10);

@@ -51,9 +51,9 @@
             </ScrollPane>
          </children>
       </VBox>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="510.0">
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="510.0">
          <children>
-            <Button fx:id="AddFoodbtn" blendMode="SRC_ATOP" mnemonicParsing="false" onMousePressed="#TurntoAddFoodbtn" style="-fx-background-color: #3f3e87; -fx-background-radius: 300;" text="+" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="125.0" AnchorPane.rightAnchor="125.0" AnchorPane.topAnchor="0.0">
+            <Button fx:id="AddFoodbtn" blendMode="SRC_ATOP" mnemonicParsing="false" onMousePressed="#TurntoAddFoodbtn" style="-fx-background-color: #3f3e87; -fx-background-radius: 300;" text="+" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="0.0">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>

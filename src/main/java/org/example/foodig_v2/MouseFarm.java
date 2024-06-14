@@ -1,6 +1,5 @@
 package org.example.foodig_v2;
 
-import javafx.scene.control.Button;
 import org.example.foodig_v2.Mouse.*;
 
 import java.util.concurrent.ScheduledExecutorService;
@@ -14,8 +13,8 @@ public class MouseFarm {
     static double mousecoin = 0.0;
     static public Mouse PetMouse = new RegularMouse();
     private static final long TOTAL_DURATION_HOURS = 8;
-    private static final double MAX_COIN = PetMouse.getCoinGenerateSpeed() * PetMouse.getSatiety() *TOTAL_DURATION_HOURS;
-    private static final double COIN_PER_SECOND = MAX_COIN / (TOTAL_DURATION_HOURS );
+    private static double MAX_COIN = PetMouse.getCoinGenerateSpeed() *TOTAL_DURATION_HOURS;
+    private static double COIN_PER_SECOND = MAX_COIN * PetMouse.getSatiety() / (15*(TOTAL_DURATION_HOURS ));
 
     public static void updateMousetoFlatMouse() {
         PetMouse = new FlatMouse();
@@ -59,12 +58,18 @@ public class MouseFarm {
         System.out.println(PetMouse.ispoison());
     }
 
+    public static void reloadCOIN_PER_SECOND() {
+        MAX_COIN = PetMouse.getCoinGenerateSpeed() * TOTAL_DURATION_HOURS;
+        COIN_PER_SECOND = MAX_COIN  * PetMouse.getSatiety() / (15*(TOTAL_DURATION_HOURS ));
+    }
+
     public static void feedFood() {
         Feed -= 1;
         System.out.println("Feed: " + Feed);
         PetMouse.addSatiety(0.1);
         SatietyTimer();
         System.out.println(PetMouse.getSatiety());
+        reloadCOIN_PER_SECOND();
     }
 
     public static void poisonTimer() {
@@ -85,10 +90,10 @@ public class MouseFarm {
 //        long duration = 8; // Set duration in hours
 //        long durationInMillis = TimeUnit.HOURS.toMillis(duration);
 
-        long duration = 15; // Set duration in seconds
+        long duration = 100; // Set duration in seconds
         long durationInMillis = TimeUnit.SECONDS.toMillis(duration);
         ScheduledExecutorService executor = newSingleThreadScheduledExecutor();
-        executor.schedule(() -> PetMouse.subSatiety(0.1), durationInMillis, TimeUnit.MILLISECONDS);
+        executor.schedule(() -> {PetMouse.subSatiety(0.1); reloadCOIN_PER_SECOND();}, durationInMillis, TimeUnit.MILLISECONDS);
         executor.shutdown(); // Gracefully shutdown the executor after scheduling
     }
 }
