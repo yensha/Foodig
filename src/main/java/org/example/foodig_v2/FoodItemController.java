@@ -9,11 +9,15 @@ import javafx.scene.effect.ColorAdjust;
 import javafx.scene.effect.ColorInput;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import static org.example.foodig_v2.FoodStorage.*;
 
 public class FoodItemController implements Initializable {
     @FXML
@@ -35,6 +39,11 @@ public class FoodItemController implements Initializable {
     private ImageView ImageView_delete;
 
     private Food food;
+    private FoodTableController foodTableController; // Reference to FoodTableController
+
+    void setFoodTableController(FoodTableController foodTableController) {
+        this.foodTableController = foodTableController;
+    }
 
     void setfoodexpiredFoodsData(Food food){
         this.food = food;
@@ -79,7 +88,27 @@ public class FoodItemController implements Initializable {
         imageView.setEffect(blend);
     }
 
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+    @FXML
+    private void handleDeleteImageClick(MouseEvent event) {
+        System.out.println("Delete button clicked for food: " + food.getName()); // 确认点击事件触发
 
+        deleteFood(food.getName()); // 删除食物项
+        System.out.println("All Foods after deleting: " + getFoodsName()); // 确认食物被删除
+
+        // 刷新列表
+        if (foodTableController != null) {
+            System.out.println("Refreshing list");
+            foodTableController.loadFoodData();
+        } else {
+            System.out.println("foodTableController is null");
+        }
     }
+
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        ImageView_delete.addEventHandler(MouseEvent.MOUSE_CLICKED, this::handleDeleteImageClick);
+        System.out.println("FoodItemController initialized"); // 确认初始化
+    }
+
 }

@@ -29,17 +29,31 @@ public class FoodTableController implements Initializable {
 
     @FXML
     private ImageView back;
+
     private SceneController scenecontroller;
     private ArrayList<Food> expiredFoods = new ArrayList<>();
     private ArrayList<Food> expiringFoods = new ArrayList<>();
     private ArrayList<Food> otherFoods = new ArrayList<>();
 
+    @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         scenecontroller = new SceneController();
+        loadFoodData();
+        reload(); // reload all food
+    }
+
+    public void loadFoodData() {
+        expiredFoods.clear();
+        expiringFoods.clear();
+        otherFoods.clear();
+
         expiredFoods.addAll(FoodStorage.getExpiredFoods());
         expiringFoods.addAll(FoodStorage.getExpiringFoods());
         otherFoods.addAll(FoodStorage.getOtherFoods());
+
         int column = 0, row = 1;
+
+        grid.getChildren().clear(); // Clear existing items from the grid
 
         // Add labels for each category
         addCategoryLabel("Expired Food", column, row++);
@@ -54,8 +68,6 @@ public class FoodTableController implements Initializable {
 
         addCategoryLabel("Other Food", column, row++);
         addFoodItemsToGrid(otherFoods, column, row, "other");
-
-        reload(); // reload all food
     }
 
     private void addCategoryLabel(String labelText, int column, int row) {
@@ -68,9 +80,12 @@ public class FoodTableController implements Initializable {
     private int addFoodItemsToGrid(ArrayList<Food> foods, int column, int row, String type) {
         try {
             for (Food food : foods) {
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("food-item.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("org.example.foodig_v2.food-item.fxml"));
                 AnchorPane pane = fxmlLoader.load();
                 FoodItemController itemController = fxmlLoader.getController();
+                itemController.setFoodTableController(this);
+
+
                 switch (type) {
                     case "expired":
                         itemController.setfoodexpiredFoodsData(food);
@@ -94,4 +109,5 @@ public class FoodTableController implements Initializable {
     public void BacktoMenu(MouseEvent event) throws IOException {
         scenecontroller.switchToMenu(event);
     }
+
 }
