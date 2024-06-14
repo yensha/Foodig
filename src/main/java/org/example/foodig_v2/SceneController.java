@@ -87,6 +87,17 @@ public class SceneController {
         stage.setScene(scene);
         stage.show();
     }
+    public void switchToAddFood_no(MouseEvent event) {
+        try {
+            root = FXMLLoader.load(getClass().getResource("food-info.fxml"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 
 
 }

@@ -98,7 +98,7 @@
             </AnchorPane>
             <Label layoutX="11.0" layoutY="210.0" text="備註" textFill="#3f3e87" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="205.0" />
             <TextArea fx:id="TextArea_FoodRemark" layoutX="8.0" layoutY="253.0" prefHeight="46.4" prefWidth="280.0" promptText="輸入食物備註" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="225.0" />
-            <Button fx:id="Button_SaveFoodInfo" layoutX="246.0" layoutY="284.0" mnemonicParsing="false" onAction="#saveFood" prefHeight="23.0" prefWidth="40.0" stylesheets="@Start_btn.css" text="儲存" textAlignment="CENTER" textFill="WHITE" />
+            <Button fx:id="Button_SaveFoodInfo" layoutX="246.0" layoutY="284.0" mnemonicParsing="false" onAction="#saveFood" onMouseClicked="#GotoMenu" prefHeight="23.0" prefWidth="40.0" stylesheets="@Start_btn.css" text="儲存" textAlignment="CENTER" textFill="WHITE" />
          </children>
       </AnchorPane>
    </children>

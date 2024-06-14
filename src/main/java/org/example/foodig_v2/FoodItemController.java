@@ -1,7 +1,10 @@
 package org.example.foodig_v2;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.effect.Blend;
 import javafx.scene.effect.BlendMode;
@@ -12,6 +15,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
@@ -40,7 +44,9 @@ public class FoodItemController implements Initializable {
 
     private Food food;
     private FoodTableController foodTableController;
+    private FoodInfoController foodInfoController;
     private sidebarController sidebarController;
+    private SceneController sceneController;
 
     void setFoodTableController(FoodTableController foodTableController) {
         this.foodTableController = foodTableController;
@@ -49,17 +55,18 @@ public class FoodItemController implements Initializable {
         this.sidebarController = sidebarController;
     }
 
+
     void setfoodexpiredFoodsData(Food food){
         this.food = food;
         Label_Foodname.setText(food.getName());
         Label_Foodname.setStyle("-fx-text-fill: White");
         Date.setStyle("-fx-text-fill: White");
         Label_Expdate.setText(food.getExpirationDate().toString());
-        Label_Expdate.setStyle("-fx-text-fill: White");
         Image image = new Image(String.valueOf(getClass().getResource(food.getImagePath())));
         Imgview_Foodimg.setImage(image);
         Imgview_Foodimg.setStyle("-fx-blend-mode: src-atop;");
         applyImageEffect(Imgview_Foodimg);
+        Label_Expdate.setStyle("-fx-text-fill: White");
         food_card.setStyle(" -fx-background-color: linear-gradient(from 27.4232% 34.279% to 58.3924% 77.0686%, #70341c 0.0%, #3a7212 100.0%);"+ " -fx-padding: 5 0 0 0;" );
     }
     void setfoodexpiringFoodsData(Food food){
@@ -109,11 +116,30 @@ public class FoodItemController implements Initializable {
             sidebarController.loadFoodData();
         }
     }
+    @FXML
+    private void ModifyFoodCardClick(MouseEvent event) {
+        System.out.println("Modify food card clicked for food: " + food.getName());
+        //sceneController.switchToAddFood_no(event);
 
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("food-info.fxml"));
+            Parent root = loader.load();
+            foodInfoController = loader.getController();
+            foodInfoController.ModifyFoodInfo(food);
+
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        sceneController = new SceneController();
         ImageView_delete.addEventHandler(MouseEvent.MOUSE_CLICKED, this::handleDeleteImageClick);
+        food_card.addEventHandler(MouseEvent.MOUSE_CLICKED, this::ModifyFoodCardClick);
         System.out.println("FoodItemController initialized");
     }
 

@@ -92,6 +92,13 @@ public class FoodInfoController implements Initializable {
             e.printStackTrace();
         }
     }
+    public void ModifyFoodInfo(Food food) {
+        TextField_FoodNameInput.setText(food.getName());
+        ChoiceBox_FoodType.getSelectionModel().select(food.getType());
+        DatePicker_ExpiredDate.setValue(food.getExpirationDate());
+        DatePicker_ManufactureDate.setValue(food.getManufacturedDate());
+        TextArea_FoodRemark.setText(food.getRemark());
+    }
     @FXML
     private DatePicker DatePicker_ExpiredDate;
     @FXML
