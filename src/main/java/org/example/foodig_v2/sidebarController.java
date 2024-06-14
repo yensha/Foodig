@@ -86,10 +86,23 @@ public class sidebarController implements Initializable {
         Mouse_Name.setStyle("-fx-font-size: 18;"+" -fx-alignment: center;");
         Image image = new Image(String.valueOf(getClass().getResource(MouseFarm.PetMouse.getImagePath())));
         MouseImage.setImage(image);
+
+        loadFoodData();
+        reload(); // reload all food
+    }
+
+    public void loadFoodData() {
+        expiredFoods.clear();
+        expiringFoods.clear();
+        otherFoods.clear();
+
         expiredFoods.addAll(FoodStorage.getExpiredFoods());
         expiringFoods.addAll(FoodStorage.getExpiringFoods());
         otherFoods.addAll(FoodStorage.getOtherFoods());
+
         int column = 0, row = 1;
+
+        grid.getChildren().clear(); // Clear existing items from the grid
 
         // Add labels for each category
         addCategoryLabel("Expired Food", column, row++);
@@ -104,8 +117,6 @@ public class sidebarController implements Initializable {
 
         addCategoryLabel("Other Food", column, row++);
         addFoodItemsToGrid(otherFoods, column, row, "other");
-
-        reload(); // reload all food
     }
 
     private void addCategoryLabel(String labelText, int column, int row) {
@@ -121,6 +132,8 @@ public class sidebarController implements Initializable {
                 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("food-item.fxml"));
                 AnchorPane pane = fxmlLoader.load();
                 FoodItemController itemController = fxmlLoader.getController();
+                itemController.setSidebarController(this);
+
                 switch (type) {
                     case "expired":
                         itemController.setfoodexpiredFoodsData(food);

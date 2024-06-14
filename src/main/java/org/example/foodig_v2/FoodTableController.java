@@ -80,7 +80,7 @@ public class FoodTableController implements Initializable {
     private int addFoodItemsToGrid(ArrayList<Food> foods, int column, int row, String type) {
         try {
             for (Food food : foods) {
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("org.example.foodig_v2.food-item.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("food-item.fxml"));
                 AnchorPane pane = fxmlLoader.load();
                 FoodItemController itemController = fxmlLoader.getController();
                 itemController.setFoodTableController(this);

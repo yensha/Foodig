@@ -39,10 +39,14 @@ public class FoodItemController implements Initializable {
     private ImageView ImageView_delete;
 
     private Food food;
-    private FoodTableController foodTableController; // Reference to FoodTableController
+    private FoodTableController foodTableController;
+    private sidebarController sidebarController;
 
     void setFoodTableController(FoodTableController foodTableController) {
         this.foodTableController = foodTableController;
+    }
+    void setSidebarController(sidebarController sidebarController) {
+        this.sidebarController = sidebarController;
     }
 
     void setfoodexpiredFoodsData(Food food){
@@ -90,17 +94,19 @@ public class FoodItemController implements Initializable {
 
     @FXML
     private void handleDeleteImageClick(MouseEvent event) {
-        System.out.println("Delete button clicked for food: " + food.getName()); // 确认点击事件触发
+        System.out.println("Delete button clicked for food: " + food.getName());
 
-        deleteFood(food.getName()); // 删除食物项
-        System.out.println("All Foods after deleting: " + getFoodsName()); // 确认食物被删除
+        deleteFood(food.getName());
+        System.out.println("All Foods after deleting: " + getFoodsName());
 
-        // 刷新列表
         if (foodTableController != null) {
             System.out.println("Refreshing list");
             foodTableController.loadFoodData();
-        } else {
-            System.out.println("foodTableController is null");
+        }
+
+        if (sidebarController != null) {
+            System.out.println("Refreshing list");
+            sidebarController.loadFoodData();
         }
     }
 
@@ -108,7 +114,7 @@ public class FoodItemController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         ImageView_delete.addEventHandler(MouseEvent.MOUSE_CLICKED, this::handleDeleteImageClick);
-        System.out.println("FoodItemController initialized"); // 确认初始化
+        System.out.println("FoodItemController initialized");
     }
 
 }
