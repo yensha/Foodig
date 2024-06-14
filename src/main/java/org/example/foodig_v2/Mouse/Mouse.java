@@ -44,9 +44,19 @@ public class Mouse {
     }
     public int getPrice(){ return price;}
 
+    public void subSatiety(double satiety, double satietySave) {
+        if (getSatiety() == satietySave) {
+            double tempSatiety = getSatiety() - satiety;
+            this.satiety = Math.max(tempSatiety, 1.0);
+        }
+
+        System.out.println(getSatiety());
+    }
+
     public void subSatiety(double satiety) {
         double tempSatiety = getSatiety() - satiety;
         this.satiety = Math.max(tempSatiety, 1.0);
+
         System.out.println(getSatiety());
     }
 

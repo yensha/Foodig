@@ -28,6 +28,11 @@ import static org.example.foodig_v2.MouseFarm.*;
 
 public class MouseController implements Initializable {
 
+    private long lastUpdate = 0;
+//    private static final long ONE_HOUR_IN_MILLIS = 60 * 60 * 1000; // One hour in milliseconds
+    private static final long ONE_HOUR_IN_MILLIS = 60 * 1000; // One minute in milliseconds for testing
+
+
     @FXML
     ImageView Image_Shop;
 
@@ -78,7 +83,7 @@ public class MouseController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         Mouse PetMouse = MouseFarm.PetMouse;
         scenecontroller = new SceneController();
-        SatietyTimer();
+//        SatietyTimer();
 
         satietyArray.add(satiety1);
         satietyArray.add(satiety2);
@@ -104,6 +109,24 @@ public class MouseController implements Initializable {
             }
         };
         timer.start();
+
+        // Initialize the last update time
+        lastUpdate = System.currentTimeMillis();
+
+        // Create an AnimationTimer
+        AnimationTimer satietyTimer = new AnimationTimer() {
+            @Override
+            public void handle(long now) {
+                long currentTime = System.currentTimeMillis();
+                if (currentTime - lastUpdate >= ONE_HOUR_IN_MILLIS) {
+                    // Update your animation or perform action
+                    PetMouse.subSatiety(0.1);
+                    reloadCOIN_PER_SECOND();
+                    lastUpdate = currentTime;
+                }
+            }
+        };
+        satietyTimer.start();
 
         MouseFarm.startCoinGeneration();
         Mouse_Name.setText(PetMouse.getName());

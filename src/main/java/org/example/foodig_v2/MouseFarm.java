@@ -67,7 +67,7 @@ public class MouseFarm {
         Feed -= 1;
         System.out.println("Feed: " + Feed);
         PetMouse.addSatiety(0.1);
-        SatietyTimer();
+//        SatietyTimer();
         System.out.println(PetMouse.getSatiety());
         reloadCOIN_PER_SECOND();
     }
@@ -85,15 +85,17 @@ public class MouseFarm {
         executor.shutdown(); // Gracefully shutdown the executor after scheduling
     }
 
+    //
     public static void SatietyTimer() {
 
 //        long duration = 8; // Set duration in hours
 //        long durationInMillis = TimeUnit.HOURS.toMillis(duration);
 
-        long duration = 100; // Set duration in seconds
+        double satietySave = PetMouse.getSatiety();
+        long duration = 10; // Set duration in seconds
         long durationInMillis = TimeUnit.SECONDS.toMillis(duration);
         ScheduledExecutorService executor = newSingleThreadScheduledExecutor();
-        executor.schedule(() -> {PetMouse.subSatiety(0.1); reloadCOIN_PER_SECOND();}, durationInMillis, TimeUnit.MILLISECONDS);
+        executor.schedule(() -> {PetMouse.subSatiety(0.1, satietySave); reloadCOIN_PER_SECOND();}, durationInMillis, TimeUnit.MILLISECONDS);
         executor.shutdown(); // Gracefully shutdown the executor after scheduling
     }
 }
