@@ -96,7 +96,7 @@ public class FoodItemController implements Initializable {
     private void handleDeleteImageClick(MouseEvent event) {
         System.out.println("Delete button clicked for food: " + food.getName());
 
-        deleteFood(food.getName());
+        deleteFood(food);
         System.out.println("All Foods after deleting: " + getFoodsName());
 
         if (foodTableController != null) {

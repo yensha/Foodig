@@ -22,6 +22,17 @@ public class FoodStorage {
     }
 
     // Method to delete food by name
+    public static void deleteFood(Food food) {
+        if (food.isExpired()) {
+            feedExpiredFood();
+        }
+        else {
+            addFeed();
+        }
+        foods.removeIf(f -> f == food);
+        reload(); // Reload expired and expiring foods after deleting food
+    }
+    // Method to delete food by name 2
     public static void deleteFood(String name) {
         if (foods.stream().filter(obj -> obj.getName().equals(name))
                 .findFirst()
@@ -139,7 +150,7 @@ public class FoodStorage {
         System.out.println("Expiring Foods: " + getExpiringFoodsName());
         System.out.println("Other Foods: " + getOtherFoodsName());
 
-        deleteFood("Apple");
+        deleteFood(foods.get(0));
         // Delete expired foods
         deleteExpiredFoods();
 
