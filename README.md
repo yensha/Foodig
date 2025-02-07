@@ -14,6 +14,7 @@ Foodig provides a **visualized record** of food items in your fridge, helping us
 
 ### **Home Page**
 <img src="https://github.com/yensha/Foodig/blob/main/Img&video/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202024-06-05%20063241.png?raw=true" width="250">
+
 Foodig automatically categorizes food into three sections based on expiration status:  
 - **Fresh**: Not yet expired  
 - **Expiring Soon**: Close to expiration  
