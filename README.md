@@ -79,9 +79,3 @@ Users can navigate through different sections by clicking the corresponding butt
 
 ## **Demo Video**  
 [Watch Demo on Youtube](https://youtube.com/shorts/yveLIEXB4uA?feature=share)
-
----
-
-This Markdown file is fully formatted with **headers, lists, images, and links**.  
-Just replace `"path/to/your_image.png"` with actual image links and update the **demo video link** accordingly. 🚀  
-Let me know if you need further modifications!
