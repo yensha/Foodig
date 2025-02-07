@@ -10,8 +10,9 @@ Foodig provides a **visualized record** of food items in your fridge, helping us
 ## **GUI Overview**  
 
 ### **Startup Screen**  
-![Startup Screen](https://github.com/yensha/Foodig/blob/main/Img&video/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202024-06-05%20063257.png?raw=true)
+<img src="https://github.com/yensha/Foodig/blob/main/Img&video/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202024-06-05%20063257.png?raw=true" width="250">
 ### **Home Page**  
+<img src="https://github.com/yensha/Foodig/blob/main/Img&video/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202024-06-05%20063310.png?raw=true" width="250">
 Foodig automatically categorizes food into three sections based on expiration status:  
 - **Fresh**: Not yet expired  
 - **Expiring Soon**: Close to expiration  
@@ -19,18 +20,22 @@ Foodig automatically categorizes food into three sections based on expiration st
 
 ### **Sidebar Menu**  
 Users can navigate through different sections by clicking the corresponding buttons on the sidebar.  
+<img src="https://github.com/yensha/Foodig/blob/main/Img&video/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202024-06-05%20063310.png?raw=true" width="250">
 
 #### **Sidebar Features**  
 - **Add Food**  
   - Input food information  
-  - Add new food items  
+  - Add new food items
+  <img src="https://github.com/yensha/Foodig/blob/main/Img&video/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202024-06-05%20063024.png?raw=true" width="250">
 - **Foods**  
-  - Categorize food items based on expiration date  
+  - Categorize food items based on expiration date
+  <img src="https://github.com/yensha/Foodig/blob/main/Img&video/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202024-06-05%20021832.png?raw=true" width="250">
 - **Game (Food / Shop)**  
   - Eat food before expiration to earn pet food and feed virtual mice.  
   - Mice generate **gold coins**, which can be used to **buy new mice or special items**.  
   - If food expires, **mice get poisoned** and stop generating coins.  
-
+  <img src="https://github.com/yensha/Foodig/blob/main/Img&video/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202024-06-05%20063436.png?raw=true" width="250">
+  <img src="https://github.com/yensha/Foodig/blob/main/Img&video/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202024-06-05%20063506.png?raw=true" width="250">
 ---
 
 ## **Class Diagram**  
