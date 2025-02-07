@@ -76,7 +76,7 @@ Users can navigate through different sections by clicking the corresponding butt
 ---
 
 ## **Demo Video**  
-[Watch Demo on GitHub](path/to/demo_video.mp4)  
+[Watch Demo on GitHub](https://youtube.com/shorts/yveLIEXB4uA?feature=share)
 
 ---
 
