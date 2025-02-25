@@ -82,3 +82,7 @@ Users can navigate through different sections by clicking the corresponding butt
 
 ## **Code**
 you can download the .zip(Suggest: After upzip the floder, use IntelliJ IDEA to open it)
+
+## **Contributor**
+George920825
+zeroazu
